@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="capture01" />
+        <module name="capture02" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01-first-programing" target="1.8" />
       <module name="capture01" target="1.8" />
+      <module name="capture02" target="1.8" />
       <module name="java-dependencies" target="1.8" />
       <module name="JavaSE" target="1.8" />
     </bytecodeTargetLevel>
