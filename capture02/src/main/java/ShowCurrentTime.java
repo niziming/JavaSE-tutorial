@@ -5,28 +5,23 @@ public class ShowCurrentTime {
 	public static void main(String[] args) {
 		//1970.1.1 00:00:00到当前为止的毫秒数
 		long totalMilliseconds = System.currentTimeMillis();
-		System.out.println("总共毫秒:" + totalMilliseconds);
-		//总共秒数
-		long totalSeconds= totalMilliseconds / 1000;
-		System.out.println("总共秒数:" + totalSeconds);
-		//总共分数
-		long totalMinutes = totalSeconds / 60;
-		System.out.println("总共分数:" + totalMinutes);
-		//总共时数
-		long totalHours = totalMinutes / 60;
-		System.out.println("总共时数:" + totalHours);
 
-		//----------------------------------------------
-
+		//总秒数
+		long totalSeconds = totalMilliseconds / 1000;
 		//当前秒
 		long currentSecond = totalSeconds % 60;
-		System.out.println(currentSecond);
+
+		//总分数
+		long totalMinutes = totalSeconds / 60;
 		//当前分
 		long currentMinute = totalMinutes % 60;
-		System.out.println(currentMinute);
-		//当前时
-		long currentHour= totalMinutes % 24;
-		System.out.println(currentHour);
+
+		//总时数
+		long totalHours = totalMinutes / 60;
+		//当前时 中国属于东八区所以加上8
+		long currentHour = totalHours % 24 + 8;
+
+		System.out.println("当前时间为 " + currentHour + ":" + currentMinute + ":" + currentSecond);
 
 	}
 }
