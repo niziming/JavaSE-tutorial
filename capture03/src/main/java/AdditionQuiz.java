@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class AdditionQuiz {
 	public static void main(String[] args) {
+		//随机
 		int num1 = (int)System.currentTimeMillis() % 10;
 		int num2 = (int)System.currentTimeMillis() / 7 % 10;
 
