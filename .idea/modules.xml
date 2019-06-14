@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaSE.iml" filepath="$PROJECT_DIR$/.idea/JavaSE.iml" />
       <module fileurl="file://$PROJECT_DIR$/capture01/capture01.iml" filepath="$PROJECT_DIR$/capture01/capture01.iml" />
       <module fileurl="file://$PROJECT_DIR$/capture02/capture02.iml" filepath="$PROJECT_DIR$/capture02/capture02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/capture03/capture03.iml" filepath="$PROJECT_DIR$/capture03/capture03.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-dependencies/java-dependencies.iml" filepath="$PROJECT_DIR$/java-dependencies/java-dependencies.iml" />
     </modules>
   </component>
