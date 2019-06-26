@@ -17,5 +17,6 @@
 		<module>capture01</module>
 		<module>capture02</module>
 		<module>capture03</module>
+		<module>capture30</module>
 	</modules>
 </project>

@@ -9,6 +9,7 @@
         <module name="capture01" />
         <module name="capture02" />
         <module name="capture03" />
+        <module name="capture30" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="capture01" target="1.8" />
       <module name="capture02" target="1.8" />
       <module name="capture03" target="1.8" />
+      <module name="capture30" target="1.8" />
       <module name="java-dependencies" target="1.8" />
       <module name="JavaSE" target="1.8" />
     </bytecodeTargetLevel>
