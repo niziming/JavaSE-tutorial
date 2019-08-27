@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/capture01/capture01.iml" filepath="$PROJECT_DIR$/capture01/capture01.iml" />
       <module fileurl="file://$PROJECT_DIR$/capture02/capture02.iml" filepath="$PROJECT_DIR$/capture02/capture02.iml" />
       <module fileurl="file://$PROJECT_DIR$/capture03/capture03.iml" filepath="$PROJECT_DIR$/capture03/capture03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/capture09/capture09.iml" filepath="$PROJECT_DIR$/capture09/capture09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/capture10/capture10.iml" filepath="$PROJECT_DIR$/capture10/capture10.iml" />
       <module fileurl="file://$PROJECT_DIR$/capture30/capture30.iml" filepath="$PROJECT_DIR$/capture30/capture30.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-dependencies/java-dependencies.iml" filepath="$PROJECT_DIR$/java-dependencies/java-dependencies.iml" />
     </modules>
