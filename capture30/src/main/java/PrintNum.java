@@ -8,16 +8,16 @@ public class PrintNum implements Runnable{
 
 	@Override
 	public void run(){
-		Thread thread4 = new Thread(new PrintChar('C', 40));
-		thread4.start();
+		// Thread thread4 = new Thread(new PrintChar('C', 40));
+		// thread4.start();
 		try {
 			for (int i = 0; i <= num; i++) {
 				System.out.print(i + " ");
-				while (i == 50) {
-					thread4.join();
-				}
+				// while (i == 50) {
+					// thread4.join();
+				// }
 			}
-		} catch (InterruptedException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

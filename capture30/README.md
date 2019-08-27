@@ -19,7 +19,6 @@ Runable接口非常简单,只包含了一个run方法.需要实现这个方法�
 
 TaskThreadDemo.java
 
-
 ## 30.4Thread类
 Thread包含了线程的构造方法,以及控制线程的方法.
 
@@ -54,3 +53,49 @@ public class Thread implements Runnable {
 
 }
 ~~~
+# 30.5闪烁的文本
+
+# 30.6线程池
+Java提供Executor接口来执行线程池中的任务,提供ExecutorService接口来管理和控制任务.
+ExecutorService是Executor的子接口.
+
+## 程序清单
+ExecutorDemo.java
+
+# 30.7 线程同步
+线程同步用于协调相互依赖的线程的执行
+如果一个共享资源被多个线程的同时访问,可能会遭到破坏.
+## 程序清单30-4
+AccountWithoutSync.java
+
+线程同步语句使用
+~~~ java
+public synchronized void xMethod(){
+
+}
+~~~
+等价于
+~~~ java
+public void xMethod(){
+    synchronize (this){
+    }
+~~~
+
+# 30.8利用加锁同步
+可以显式的采用加锁和状态来同步线程
+在程序清单30-4中,100个任务向同一个账户并发存储一个便士,会造成冲突.在deposit方法中
+使用synchronized关键字可以避免这种情况.
+public synchronized void deposit(double amount)
+同步的实例方法都是隐式地需要一个加在实例上的锁.
+java可以显示的加锁,这位协调线程带来了更多的控制功能.
+一个锁是一个lock接口的实例,它定义了加锁和释放锁的方法.
+
+## 程序清单30-5
+AccountWithoutSyncUsingLock.java
+
+# 30.9线程间协作
+
+
+
+
+
