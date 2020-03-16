@@ -1,3 +1,5 @@
+package capture30;
+
 public class Client {
 	void someMethod() {
 		TaskClass task = new TaskClass();

@@ -1,3 +1,5 @@
+package capture30;
+
 public class PrintNum implements Runnable{
 	private int num;
 

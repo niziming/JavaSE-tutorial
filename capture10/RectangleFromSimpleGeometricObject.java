@@ -1,3 +1,5 @@
+package capture10;
+
 public class RectangleFromSimpleGeometricObject extends SimpleGeometricObject {
     private double width;
     private double height;
@@ -46,7 +48,7 @@ public class RectangleFromSimpleGeometricObject extends SimpleGeometricObject {
 
     @Override
     public String toString() {
-        return "RectangleFromSimpleGeometricObject{" +
+        return "capture10.RectangleFromSimpleGeometricObject{" +
                 "width=" + width +
                 ", height=" + height +
                 ", CreateDate=" + getDateCreated() +

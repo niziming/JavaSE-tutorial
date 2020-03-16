@@ -1,3 +1,5 @@
+package capture10;
+
 import java.time.LocalDateTime;
 
 public class SimpleGeometricObject {
@@ -40,7 +42,7 @@ public class SimpleGeometricObject {
 
     @Override
     public String toString() {
-        return "SimpleGeometricObject{" +
+        return "capture10.SimpleGeometricObject{" +
                 "color='" + color + '\'' +
                 ", filled=" + filled +
                 ", dateCreated=" + dateCreated +

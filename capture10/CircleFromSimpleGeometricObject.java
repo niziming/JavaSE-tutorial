@@ -1,3 +1,5 @@
+package capture10;
+
 public class CircleFromSimpleGeometricObject extends SimpleGeometricObject {
     private double radius;
     private double area;
@@ -32,7 +34,7 @@ public class CircleFromSimpleGeometricObject extends SimpleGeometricObject {
 
     @Override
     public String toString() {
-        return "CircleFromSimpleGeometricObject{" +
+        return "capture10.CircleFromSimpleGeometricObject{" +
                 "The circle is created=" + getDateCreated() +
                 ", radius=" + radius +
                 ", area=" + area +

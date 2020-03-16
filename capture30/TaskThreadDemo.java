@@ -1,3 +1,5 @@
+package capture30;
+
 public class TaskThreadDemo {
 	public static void main(String[] args) {
 		PrintChar PrintA = new PrintChar('A', 100);

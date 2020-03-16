@@ -1,3 +1,5 @@
+package capture30;
+
 public class PrintChar implements Runnable {
 
 	private char charToPoint;
