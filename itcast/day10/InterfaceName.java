@@ -19,9 +19,9 @@ public interface InterfaceName {
         // 执行语句
     }
     // JDK9新增私有方法
-    void methodPrivete() {
+    private void methodPrivete() {
         // 执行语句
-        System.out.println("我是接口的私有方法,只可以被默认方法调用!");
+        // System.out.println("我是接口的私有方法,只可以被默认方法调用!");
     }
 
     // JDK9私有静态方法

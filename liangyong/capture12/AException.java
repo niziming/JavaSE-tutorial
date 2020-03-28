@@ -7,7 +7,7 @@ public class AException {
         ArrayList nums = new ArrayList(3);
         // nums.add(new IntHandle());
         // nums.add(1);
-        Integer i = new Integer(20);
+        Integer i = 20;
         int a = i;
         System.out.println(a);
     }
