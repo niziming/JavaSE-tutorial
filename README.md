@@ -4,17 +4,11 @@
 ## liangyong
 Java语言程序设计(基础篇)(原书第10版) 作者: 梁勇(Y.Daniel Liang) JDK8
 
-### 基础篇
-#### 第1章 计算机、程序和Java概述
-#### 第2章 基本程序设计
-#### 第3章 选择
-
-### 进阶篇
-#### 第30章 多线程和并行程序设计
-
 ## itcast
-2020最新黑马Java SE从入门到精通-IDEA版【已完结】JDK9
+2020最新黑马Java SE从入门到精通-IDEA版【已完结】
+黑马传智博客2020年JavaSE JDK1.9版本,B站上有配套视频.
 
 参考资料
 > 计算机科学丛书: Java语言程序设计(基础篇)(原书第10版) 作者: 梁勇(Y.Daniel Liang) 
 > 2020最新黑马Java SE从入门到精通-IDEA版【已完结】
+> https://www.bilibili.com/video/BV1R741167tX/

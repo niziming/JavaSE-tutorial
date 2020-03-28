@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/capture01" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/capture02" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/capture03" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/capture09" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/capture10" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/capture10" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/capture30" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/java-dependencies" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/itcast/day02/Main.java" charset="UTF-8" />
   </component>
 </project>

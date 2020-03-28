@@ -1,44 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="891cceb7-77c0-40ab-a3f4-4321d10d1487" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="fa2d1ab4-8851-49c5-abcc-118e7e40305c" name="Default Changelist" comment="简化开发">
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/AdditionQuiz.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/ComputeArea.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/ComputeAreaWithConsoleInput.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/ComputeAverage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/ComputeExpression.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/DataTypeConversion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/FindError.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/ShowCurrentTime.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/SimpleIfDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/SubtractionQuiz.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/TestLoanClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/Welcome.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/WelcomeWithThreeMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture01/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture01/capture01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture02/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture02/capture02.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture03/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture03/capture03.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture09/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture09/capture09.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture10/CircleFromSimpleGeometricObject.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture10/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture10/RectangleFromSimpleGeometricObject.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture10/SimpleGeometricObject.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture10/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture10/capture10.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture12/AException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture12/IntHandle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture17/BinaryIO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/AccountWithoutSync$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/AccountWithoutSync$Account.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/AccountWithoutSync$AddAPennyTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/AccountWithoutSync.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/AccountWithoutSyncUsingLock$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/AccountWithoutSyncUsingLock$Account.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/AccountWithoutSyncUsingLock$AddAPennyTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/AccountWithoutSyncUsingLock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/ExecutorDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/PrintChar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/PrintNum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/TaskClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/TaskThreadDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/capture30/capture30.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/day02/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/day03/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/day12/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/day12/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/day12/demo/CalenderTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/day12/demo/DateTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaSE/day13/VisualAccumulator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JavaSE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JavaSE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture01/capture01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/capture01/capture01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture01/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture01/src/main/java/ComputeExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/capture01/ComputeExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture01/src/main/java/Welcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/capture01/Welcome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture01/src/main/java/WelcomeWithThreeMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/capture01/WelcomeWithThreeMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture02/capture02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/capture02/capture02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture02/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture02/src/main/java/ComputeArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/capture02/ComputeArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture02/src/main/java/ComputeAreaWithConsoleInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/capture02/ComputeAreaWithConsoleInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture02/src/main/java/ComputeAverage.java" beforeDir="false" afterPath="$PROJECT_DIR$/capture02/ComputeAverage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture02/src/main/java/DataTypeConversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/capture02/DataTypeConversion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture02/src/main/java/FindError.java" beforeDir="false" afterPath="$PROJECT_DIR$/capture02/FindError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture02/src/main/java/ShowCurrentTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/capture02/ShowCurrentTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture02/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/capture02/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-dependencies/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-dependencies/java-dependencies.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-dependencies/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capture10/CircleFromSimpleGeometricObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capture10/RectangleFromSimpleGeometricObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capture10/SimpleGeometricObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/capture10/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/capture10/CircleFromSimpleGeometricObjectTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/capture10/RectangleFromSimpleGeometricObjectTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/capture10/SimpleGeometricObjectTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/capture02/target/" />
-    <ignored path="$PROJECT_DIR$/capture01/target/" />
-    <ignored path="$PROJECT_DIR$/capture03/target/" />
-    <ignored path="$PROJECT_DIR$/capture30/target/" />
-    <ignored path="$PROJECT_DIR$/capture10/target/" />
-    <ignored path="$PROJECT_DIR$/capture09/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,77 +91,107 @@
     <session id="1678348453">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.5" value="3" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="4" />
-          <entry key="iml" value="2" />
-          <entry key="java" value="29" />
-          <entry key="md" value="13" />
-          <entry key="xml" value="25" />
+          <entry key="gitignore" value="2" />
+          <entry key="java" value="43" />
+          <entry key="md" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="4" />
-          <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="29" />
-          <entry key="Markdown" value="13" />
-          <entry key="XML" value="25" />
+          <entry key="JAVA" value="43" />
+          <entry key="Markdown" value="5" />
+          <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="2" />
-          <entry key="ft" value="6" />
-          <entry key="java" value="2090" />
-          <entry key="md" value="708" />
-          <entry key="txt" value="30" />
-          <entry key="xml" value="17" />
+          <entry key="dummy" value="14" />
+          <entry key="gitignore" value="10" />
+          <entry key="java" value="1674" />
+          <entry key="md" value="152" />
+          <entry key="txt" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2090" />
-          <entry key="Markdown" value="708" />
-          <entry key="PLAIN_TEXT" value="32" />
-          <entry key="VTL" value="6" />
-          <entry key="XML" value="17" />
+          <entry key="JAVA" value="1674" />
+          <entry key="Markdown" value="152" />
+          <entry key="PLAIN_TEXT" value="63" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/capture10/pom.xml">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="14" selection-end-column="10" />
+            <state relative-caret-position="19">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/capture01/ComputeExpression.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/itcast/day11/demo/Main.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/capture02/README.md">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="228">
+                <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/liangyong/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="228">
+                <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itcast/day13/demo/Test.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itcast/day14/Test.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itcast/day21/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itcast/day12/day01【Object类、常用API】-笔记.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor />
@@ -143,12 +201,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/capture01/README.md">
+        <entry file="file://$PROJECT_DIR$/itcast/day13/day02【Collection、泛型】-笔记.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="152">
-                <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <first_editor relative-caret-position="456">
+                <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+                <folding>
+                  <element signature="imports" expanded="true" />
+                  <element signature="imports" expanded="true" />
+                </folding>
               </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itcast/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
               <second_editor />
             </state>
           </provider>
@@ -160,47 +232,42 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
-    <dirStrings>
-      <dir>D:\IdeaProjects\JavaSE\.idea</dir>
-    </dirStrings>
+    <findStrings>
+      <find>equ</find>
+      <find>equals</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/capture10/src/main/java/TestLoanClass.java" />
-        <option value="$PROJECT_DIR$/capture30/pom.xml" />
-        <option value="$PROJECT_DIR$/capture03/src/main/java/TestLoanClass.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/capture09/src/main/java/text.java" />
-        <option value="$PROJECT_DIR$/capture10/src/main/java/Test.java" />
-        <option value="$PROJECT_DIR$/capture09/pom.xml" />
-        <option value="$PROJECT_DIR$/capture10/pom.xml" />
-        <option value="$PROJECT_DIR$/capture30/src/main/java/TaskClass.java" />
-        <option value="$PROJECT_DIR$/capture30/src/main/java/TestJoin.java" />
-        <option value="$PROJECT_DIR$/capture30/src/main/java/FlashText.java" />
-        <option value="$PROJECT_DIR$/capture30/src/main/java/PrintNum.java" />
-        <option value="$PROJECT_DIR$/capture30/src/main/java/ExecutorDemo.java" />
-        <option value="$PROJECT_DIR$/capture30/src/main/java/AccountWithoutSync.java" />
-        <option value="$PROJECT_DIR$/capture30/src/main/java/AccountWithoutSyncUsingLock.java" />
-        <option value="$PROJECT_DIR$/capture30/README.md" />
-        <option value="$PROJECT_DIR$/capture10/README.md" />
-        <option value="$PROJECT_DIR$/capture10/src/test/java/SimpleGeometricObjectTest.java" />
-        <option value="$PROJECT_DIR$/capture10/src/main/java/SimpleGeometricObject.java" />
-        <option value="$PROJECT_DIR$/capture10/src/test/java/CircleFromSimpleGeometricObjectTest.java" />
-        <option value="$PROJECT_DIR$/capture10/src/main/java/CircleFromSimpleGeometricObject.java" />
-        <option value="$PROJECT_DIR$/capture10/src/main/java/RectangleFromSimpleGeometricObject.java" />
-        <option value="$PROJECT_DIR$/capture10/src/test/java/RectangleFromSimpleGeometricObjectTest.java" />
+        <option value="$PROJECT_DIR$/capture30/PrintChar.java" />
+        <option value="$PROJECT_DIR$/capture17/BinaryIO.java" />
+        <option value="$PROJECT_DIR$/capture12/FileClass.java" />
+        <option value="$PROJECT_DIR$/capture12/IntHandle.java" />
+        <option value="$PROJECT_DIR$/capture12/AException.java" />
+        <option value="$PROJECT_DIR$/day02/Main.java" />
+        <option value="$PROJECT_DIR$/day03/Main.java" />
+        <option value="$PROJECT_DIR$/day12/Person.java" />
+        <option value="$PROJECT_DIR$/day12/Test.java" />
+        <option value="$PROJECT_DIR$/day12/demo/DateTest.java" />
+        <option value="$PROJECT_DIR$/day12/demo/Calender.java" />
+        <option value="$PROJECT_DIR$/day12/demo/CalenderTest.java" />
+        <option value="$PROJECT_DIR$/day13/VisualAccumulator.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/itcast/day11/demo/Main.java" />
+        <option value="$PROJECT_DIR$/liangyong/README.md" />
+        <option value="$PROJECT_DIR$/itcast/day13/demo/Test.java" />
+        <option value="$PROJECT_DIR$/itcast/day14/Test.java" />
+        <option value="$PROJECT_DIR$/itcast/day21/Main.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -210,86 +277,73 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Development\MavenRepository" />
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="userSettingsFile" value="D:\Program Files\JetBrains\IntelliJ IDEA 2018.2.5\plugins\maven\lib\maven3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="capture02" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="735" />
-    <option name="y" value="145" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="76" />
+    <option name="y" value="14" />
     <option name="width" value="1195" />
-    <option name="height" value="891" />
+    <option name="height" value="1047" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="JavaSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="capture01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="capture03" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="capture03" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaSE" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584362920999" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/capture01" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1585359360864" />
+    <property name="last.edited.regexp" value="asdasd" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringBoot-Seed" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IdeaProjects\JavaSE\capture02" />
-      <recent name="D:\IdeaProjects\JavaSE\capture01" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+      <recent name="D:\IdeaProjects\JavaSE\capture03" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IdeaProjects\JavaSE\capture01" />
-      <recent name="D:\IdeaProjects\JavaSE" />
-      <recent name="D:\IdeaProjects\JavaSE\capture10\src\main\java" />
+      <recent name="D:\IdeaProjects\JavaSE\itcast\day24" />
+      <recent name="D:\IdeaProjects\JavaSE\itcast\day23" />
+      <recent name="D:\IdeaProjects\JavaSE\itcast\day22" />
+      <recent name="D:\IdeaProjects\JavaSE\itcast\day21" />
+      <recent name="D:\IdeaProjects\JavaSE\itcast\day20" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -304,183 +358,143 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RectangleFromSimpleGeometricObjectTest.rectangleFromSimpleGeometricObjectTest">
-    <configuration name="AccountWithoutSyncUsingLock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AccountWithoutSyncUsingLock" />
-      <module name="capture30" />
+  <component name="RunManager" selected="Application.VisualAccumulator">
+    <configuration name="CalenderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="itcast.day12.demo.CalenderTest" />
+      <module name="JavaSE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="itcast.day12.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleGeometricObjectTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SimpleGeometricObjectTest" />
-      <module name="capture10" />
+    <configuration name="DateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="itcast.day12.demo.DateTest" />
+      <module name="JavaSE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="itcast.day12.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="itcast.day03.Main" />
+      <module name="JavaSE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="itcast.day03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <module name="capture09" />
+      <option name="MAIN_CLASS_NAME" value="itcast.day12.Test" />
+      <module name="JavaSE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="itcast.day12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CircleFromSimpleGeometricObjectTest.setRadius" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="capture10" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CircleFromSimpleGeometricObjectTest" />
-      <option name="METHOD_NAME" value="setRadius" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RectangleFromSimpleGeometricObjectTest.rectangleFromSimpleGeometricObjectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="capture10" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RectangleFromSimpleGeometricObjectTest" />
-      <option name="METHOD_NAME" value="rectangleFromSimpleGeometricObjectTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RectangleFromSimpleGeometricObjectTest.toString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="capture10" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RectangleFromSimpleGeometricObjectTest" />
-      <option name="METHOD_NAME" value="toString" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="VisualAccumulator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="itcast.day13.VisualAccumulator" />
+      <module name="JavaSE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="itcast.day13.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Test" />
-      <item itemvalue="Application.AccountWithoutSyncUsingLock" />
-      <item itemvalue="Application.SimpleGeometricObjectTest" />
-      <item itemvalue="JUnit.CircleFromSimpleGeometricObjectTest.setRadius" />
-      <item itemvalue="JUnit.RectangleFromSimpleGeometricObjectTest.toString" />
-      <item itemvalue="JUnit.RectangleFromSimpleGeometricObjectTest.rectangleFromSimpleGeometricObjectTest" />
+      <item itemvalue="Application.DateTest" />
+      <item itemvalue="Application.CalenderTest" />
+      <item itemvalue="Application.VisualAccumulator" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RectangleFromSimpleGeometricObjectTest.rectangleFromSimpleGeometricObjectTest" />
-        <item itemvalue="JUnit.RectangleFromSimpleGeometricObjectTest.toString" />
-        <item itemvalue="JUnit.CircleFromSimpleGeometricObjectTest.setRadius" />
-        <item itemvalue="Application.SimpleGeometricObjectTest" />
-        <item itemvalue="Application.AccountWithoutSyncUsingLock" />
+        <item itemvalue="Application.VisualAccumulator" />
+        <item itemvalue="Application.CalenderTest" />
+        <item itemvalue="Application.DateTest" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+  </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\ziming\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="891cceb7-77c0-40ab-a3f4-4321d10d1487" name="Default Changelist" comment="" />
-      <created>1565340643625</created>
+      <changelist id="fa2d1ab4-8851-49c5-abcc-118e7e40305c" name="Default Changelist" comment="" />
+      <created>1584365066278</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1565340643625</updated>
-      <workItem from="1565340645516" duration="1324000" />
-      <workItem from="1565342228419" duration="1237000" />
-      <workItem from="1566870469253" duration="2711000" />
-      <workItem from="1566874748435" duration="2033000" />
-      <workItem from="1566885113397" duration="5160000" />
-      <workItem from="1566961038417" duration="67000" />
-      <workItem from="1567132502287" duration="2555000" />
-      <workItem from="1584020086023" duration="1305000" />
-      <workItem from="1584194640610" duration="229000" />
-      <workItem from="1584361620831" duration="1307000" />
+      <updated>1584365066278</updated>
+      <workItem from="1584365069500" duration="4706000" />
+      <workItem from="1584448296095" duration="2542000" />
+      <workItem from="1584451501631" duration="1085000" />
+      <workItem from="1584758866868" duration="2153000" />
+      <workItem from="1584879930802" duration="2709000" />
+      <workItem from="1585141600355" duration="1682000" />
+      <workItem from="1585358115169" duration="1229000" />
     </task>
-    <task id="LOCAL-00001" summary="第30章 多线程和并行程序">
-      <created>1566889147514</created>
+    <task id="LOCAL-00001" summary="简化开发">
+      <created>1584365303314</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1566889147514</updated>
+      <updated>1584365303314</updated>
     </task>
-    <task id="LOCAL-00002" summary="第3章 选择">
-      <created>1566889218818</created>
+    <task id="LOCAL-00002" summary="黑马2020JavaSE">
+      <created>1585358318887</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1566889218818</updated>
+      <updated>1585358318887</updated>
     </task>
-    <task id="LOCAL-00003" summary="第7章 一维数组">
-      <created>1566889270506</created>
+    <task id="LOCAL-00003" summary="各个作者的JavaSE讲解">
+      <created>1585359243568</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1566889270506</updated>
+      <updated>1585359243568</updated>
     </task>
-    <task id="LOCAL-00004" summary="10章 面向对象思考">
-      <created>1566889313940</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1566889313940</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Java语言程序设计(基础篇)原书(第10版)(梁勇著)">
-      <created>1566889342230</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1566889342230</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="CircleFromSimpleGeometricObjectTest_setRadius - 2019.08.30 at 11h 05m 16s.xml">
-      <configuration name="CircleFromSimpleGeometricObjectTest.setRadius" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CircleFromSimpleGeometricObjectTest_setRadius - 2019.08.30 at 11h 05m 58s.xml">
-      <configuration name="CircleFromSimpleGeometricObjectTest.setRadius" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CircleFromSimpleGeometricObjectTest_setRadius - 2019.08.30 at 11h 06m 22s.xml">
-      <configuration name="CircleFromSimpleGeometricObjectTest.setRadius" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CircleFromSimpleGeometricObjectTest_setRadius - 2019.08.30 at 11h 07m 30s.xml">
-      <configuration name="CircleFromSimpleGeometricObjectTest.setRadius" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CircleFromSimpleGeometricObjectTest_setRadius - 2019.08.30 at 11h 07m 57s.xml">
-      <configuration name="CircleFromSimpleGeometricObjectTest.setRadius" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CircleFromSimpleGeometricObjectTest_setRadius - 2019.08.30 at 11h 08m 13s.xml">
-      <configuration name="CircleFromSimpleGeometricObjectTest.setRadius" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CircleFromSimpleGeometricObjectTest_setRadius - 2019.08.30 at 11h 10m 20s.xml">
-      <configuration name="CircleFromSimpleGeometricObjectTest.setRadius" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RectangleFromSimpleGeometricObjectTest_toString - 2019.08.30 at 11h 16m 57s.xml">
-      <configuration name="RectangleFromSimpleGeometricObjectTest.toString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RectangleFromSimpleGeometricObjectTest_rectangleFromSimpleGeometricObjectTest - 2019.08.30 at 11h 17m 17s.xml">
-      <configuration name="RectangleFromSimpleGeometricObjectTest.rectangleFromSimpleGeometricObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RectangleFromSimpleGeometricObjectTest_rectangleFromSimpleGeometricObjectTest - 2019.08.30 at 11h 17m 28s.xml">
-      <configuration name="RectangleFromSimpleGeometricObjectTest.rectangleFromSimpleGeometricObjectTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17928000" />
-  </component>
-  <component name="TodoView" selected-index="3">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="16106000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="76" y="14" width="1195" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18508583" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27693677" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -489,17 +503,50 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32739422" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946353" weight="0.2973274" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3975501" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32918552" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2760181" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39932126" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.1399776" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005365" side_tool="true" weight="0.21340388" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49950445" weight="0.19148937" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.3283582" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3280543" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="JRebel Executor" order="12" />
+      <window_info anchor="bottom" id="JRebel Console" order="13" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24933214" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32947463" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32947463" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25823686" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="JRebel" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32922733" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2760181" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3282967" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" weight="0.268757" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="JRebel Executor" order="12" />
       <window_info anchor="bottom" id="JRebel Console" order="13" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -507,288 +554,283 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.19849785" />
-      <window_info anchor="right" id="Database" order="6" weight="0.3295099" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32947463" />
+      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="第30章 多线程和并行程序" />
-    <MESSAGE value="第3章 选择" />
-    <MESSAGE value="第7章 一维数组" />
-    <MESSAGE value="10章 面向对象思考" />
-    <MESSAGE value="Java语言程序设计(基础篇)原书(第10版)(梁勇著)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Java语言程序设计(基础篇)原书(第10版)(梁勇著)" />
+    <MESSAGE value="简化开发" />
+    <MESSAGE value="黑马2020JavaSE" />
+    <MESSAGE value="各个作者的JavaSE讲解" />
+    <option name="LAST_COMMIT_MESSAGE" value="各个作者的JavaSE讲解" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/capture10/src/main/java/Client.java" />
-    <entry file="file://$PROJECT_DIR$/capture10/src/main/java/TestLoanClass.java" />
-    <entry file="file://$PROJECT_DIR$/capture10/src/main/java/AdditionQuiz.java" />
-    <entry file="file://$PROJECT_DIR$/capture03/src/main/java/AdditionQuiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture30/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture03/src/main/java/TestLoanClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture09/src/main/java/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture03/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture09/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture30/src/main/java/TestJoin.java" />
-    <entry file="file://$PROJECT_DIR$/capture30/src/main/java/FlashText.java" />
-    <entry file="file://$PROJECT_DIR$/capture01/pom.xml">
+    <entry file="file://$PROJECT_DIR$/liangyong/capture02/ComputeAverage.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/capture10/capture10.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture30/src/main/java/Account.java" />
-    <entry file="file://$PROJECT_DIR$/capture30/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="244">
-            <caret line="23" selection-start-line="23" selection-end-line="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture30/src/main/java/AccountWithoutSyncUsingLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture30/src/main/java/AccountWithoutSync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture30/src/main/java/ExecutorDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret selection-end-line="4" selection-end-column="6" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture30/src/main/java/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture30/src/main/java/PrintChar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture30/src/main/java/PrintNum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture10/src/main/java/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture10/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="38">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture10/src/main/java/SimpleGeometricObject.java">
+    <entry file="file://$PROJECT_DIR$/liangyong/capture09/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/capture10/src/main/java/CircleFromSimpleGeometricObject.java">
+    <entry file="file://$PROJECT_DIR$/liangyong/capture10/CircleFromSimpleGeometricObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/capture10/src/main/java/RectangleFromSimpleGeometricObject.java">
+    <entry file="file://$PROJECT_DIR$/liangyong/capture10/RectangleFromSimpleGeometricObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/capture10/src/test/java/CircleFromSimpleGeometricObjectTest.java">
+    <entry file="file://$PROJECT_DIR$/liangyong/capture10/SimpleGeometricObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/capture10/src/test/java/SimpleGeometricObjectTest.java">
+    <entry file="file://$PROJECT_DIR$/liangyong/capture10/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liangyong/capture30/ExecutorDemo.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liangyong/capture30/Client.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liangyong/capture30/AccountWithoutSync.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liangyong/capture30/PrintNum.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liangyong/capture30/TaskClass.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liangyong/capture30/TaskThreadDemo.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liangyong/capture17/BinaryIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/Cloneable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liangyong/capture30/AccountWithoutSyncUsingLock.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1292">
+          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liangyong/capture30/PrintChar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/capture30/src/main/java/TaskClass.java">
+    <entry file="file://$PROJECT_DIR$/liangyong/capture12/IntHandle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liangyong/capture12/AException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day02/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="70" column="58" selection-start-line="70" selection-start-column="58" selection-end-line="70" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2242">
+          <caret line="143" column="38" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/Iterable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day03/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day12/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day12/Demo.java" />
+    <entry file="jar://D:/Program Files/Java/jdk-9/lib/src.zip!/java.base/java/text/DateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4528">
+          <caret line="171" column="22" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk-9/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2527">
+          <caret line="156" column="25" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day12/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+          <folding>
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day12/demo/DateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day12/demo/CalenderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk-9/lib/src.zip!/java.base/java/util/Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7391">
+          <caret line="445" column="33" selection-start-line="445" selection-start-column="33" selection-end-line="445" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk-9/lib/src.zip!/java.base/java/util/JapaneseImperialCalendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7467">
+          <caret line="430" column="16" selection-start-line="430" selection-start-column="16" selection-end-line="430" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day13/VisualAccumulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day01/Demo01Const.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day03/Do02While.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day11/demo/Main.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day13/demo/Test.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day14/Test.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itcast/day21/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/capture30/src/main/java/TaskThreadDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture10/src/test/java/RectangleFromSimpleGeometricObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-dependencies/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture10/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture02/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/capture01/ComputeExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-dependencies/README.md">
+    <entry file="file://$PROJECT_DIR$/itcast/day12/day01【Object类、常用API】-笔记.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
@@ -796,20 +838,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/capture01/README.md">
+    <entry file="file://$PROJECT_DIR$/itcast/day13/day02【Collection、泛型】-笔记.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="152">
-            <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <first_editor relative-caret-position="456">
+            <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <folding>
+              <element signature="imports" expanded="true" />
+              <element signature="imports" expanded="true" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/capture02/README.md">
+    <entry file="file://$PROJECT_DIR$/liangyong/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor />
+          <first_editor relative-caret-position="228">
+            <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="228">
+            <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          </first_editor>
           <second_editor />
         </state>
       </provider>
@@ -831,7 +889,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Detection</last-edited>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -854,7 +912,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>9</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -866,12 +924,24 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>capture02</last-edited>
+          <last-edited>JavaSE</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
                 <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
