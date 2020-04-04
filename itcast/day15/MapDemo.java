@@ -1,6 +1,6 @@
 package itcast.day15;
 
-import day14.Student;
+import itcast.day14.Student;
 
 import java.util.*;
 
