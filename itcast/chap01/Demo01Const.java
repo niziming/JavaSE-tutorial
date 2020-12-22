@@ -1,4 +1,4 @@
-package itcast.day01;
+package itcast.chap01;
 
 public class Demo01Const {
     public static void main(String[] args) {

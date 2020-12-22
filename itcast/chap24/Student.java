@@ -1,6 +1,4 @@
-package itcast.day24;
-
-import java.lang.module.ModuleDescriptor;
+package itcast.chap24;
 
 public class Student {
     private String name;

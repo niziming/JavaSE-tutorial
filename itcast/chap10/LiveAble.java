@@ -1,4 +1,4 @@
-package itcast.day10;
+package itcast.chap10;
 
 public class LiveAble {
     public static void main(String[] args) {
