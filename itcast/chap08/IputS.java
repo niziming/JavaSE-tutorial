@@ -1,4 +1,6 @@
-package itcast.day08;
+package itcast.chap08;
+
+import itcast.chap08.ClassName;
 
 import java.io.FileInputStream;
 import java.io.IOException;

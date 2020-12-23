@@ -49,6 +49,12 @@ public class DefinitionArray implements Cloneable {
         }
         System.out.println();
     }
+    private static void ergodic(byte[] arr) {
+        for (int i : arr) {
+            System.out.printf("%3d", i);
+        }
+        System.out.println();
+    }
 
     public static void ergodic(Object[] arr) {
         for (Object i : arr) {

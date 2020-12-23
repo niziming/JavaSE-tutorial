@@ -1,6 +1,7 @@
-package itcast.day09;
+package itcast.chap09;
 
-import itcast.day08.Phone;
+
+import itcast.chap08.Phone;
 
 public class NewPhone extends Phone {
     @Override

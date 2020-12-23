@@ -1,4 +1,4 @@
-package itcast.day08;
+package itcast.chap08;
 
 public class Phone {
     int number;
