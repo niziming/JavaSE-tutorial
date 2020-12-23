@@ -1,8 +1,10 @@
 package itcast.chap05;
 
+import itcast.chap07.Student;
+
 import java.util.ArrayList;
 
-public class DefinitionArray {
+public class DefinitionArray implements Cloneable {
     public static void main(String[] args) {
         // 数组存储的数据类型[] 数组名字 = new 数组存储的数据类型[长度];
         // int[] arr = new int[10];
@@ -44,6 +46,15 @@ public class DefinitionArray {
     private static void ergodic(int[] arr) {
         for (int i : arr) {
             System.out.printf("%3d", i);
+        }
+        System.out.println();
+    }
+
+    public static void ergodic(Object[] arr) {
+        for (Object i : arr) {
+            if (i.getClass() == Student.class) System.out.println(i.toString());
+            else System.out.printf("%3d", i);
+
         }
         System.out.println();
     }
