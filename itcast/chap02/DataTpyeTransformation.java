@@ -13,6 +13,10 @@ public class DataTpyeTransformation {
         short s = 1;
         s = (short)(s+60000);
         System.out.println(s);
+        // 比较运算符
+        System.out.println(1==1);
+        Boolean b1 = 1==1;
+        System.out.println(b1);
     }
     private static String getType(Object o) {
         return o.getClass().toString();

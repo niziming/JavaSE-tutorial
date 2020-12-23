@@ -11,6 +11,10 @@ public class Main {
         }
         method();
         operator();
+        method1();
+        // 方法不可嵌套方法
+        // public static void method2(){
+        // }
     }
 
     public static void method() {
@@ -24,5 +28,11 @@ public class Main {
         int j = 0;
         j = (3 <= 4 ? 500 : 600);
         System.out.println(j);
+    }
+    // 方法的调用
+
+    public static String method1() {
+        System.out.println("自己定义的方法,需要调用");
+        return "11";
     }
 }

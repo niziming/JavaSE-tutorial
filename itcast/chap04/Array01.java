@@ -1,4 +1,4 @@
-package itcast.day04;
+package itcast.chap04;
 
 public class Array01 {
     // public ArrayList arr = new ArrayList<Integer>(10);
