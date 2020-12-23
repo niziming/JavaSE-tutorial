@@ -1,4 +1,4 @@
-package itcast.day06;
+package itcast.chap06;
 
 public class ClassName {
     // 成员变量
@@ -20,10 +20,12 @@ public class ClassName {
     public void setName(String name) {
         this.name = name;
     }
+
     // 成员方法
-    protected void study () {
+    protected void study() {
         System.out.println(name + "好好学习, 天天向上");
     }
+
     public void eat() {
         System.out.println(name + "饿了要吃饭");
     }

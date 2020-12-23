@@ -1,4 +1,4 @@
-package itcast.day06;
+package itcast.chap06;
 
 public class Car {
     private String color;

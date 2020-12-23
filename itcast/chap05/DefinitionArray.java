@@ -43,8 +43,7 @@ public class DefinitionArray {
 
     private static void ergodic(int[] arr) {
         for (int i : arr) {
-            System.out.print(i);
-            System.out.print(' ');
+            System.out.printf("%3d", i);
         }
         System.out.println();
     }
