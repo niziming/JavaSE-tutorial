@@ -17,7 +17,7 @@ public class SimpleClient {
         InputStream is = socket.getInputStream();
         ObjectInputStream ois = new ObjectInputStream(is);
         // 创建一个远程调用对象
-        Call c = new Call("itcast.chap26reflect.demo.HelloService", "echo", new Class[] {String.class}, new Object[] {"Java"});
+        Call c = new Call("itcast.chap26reflect.demo9.HelloService", "echo", new Class[] {String.class}, new Object[] {"Java"});
         // 向服务器发送对象
         oos.writeObject(c);
         // 接受服务器返回的对象,包含了方法执行结果的Call对象

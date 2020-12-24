@@ -1,4 +1,4 @@
-package itcast.chap09.demo;
+package itcast.chap09.demo9;
 
 public class Lord extends User {
     public Lord(String name, int money) {

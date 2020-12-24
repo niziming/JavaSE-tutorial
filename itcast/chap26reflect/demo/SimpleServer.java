@@ -65,7 +65,7 @@ public class SimpleServer {
     public static void main(String[] args) throws Exception {
         SimpleServer server = new SimpleServer();
         // 把事先创建的HelloServiceImpl对象加入服务器缓冲中
-        server.register("itcast.chap26reflect.demo.HelloService", new HelloServiceImpl());
+        server.register("itcast.chap26reflect.demo9.HelloService", new HelloServiceImpl());
         server.service();
     }
 }

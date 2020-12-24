@@ -1,4 +1,4 @@
-package itcast.chap09.demo;
+package itcast.chap09.demo9;
 
 
 public class Main {
@@ -12,5 +12,6 @@ public class Main {
         System.out.println(lord);
         System.out.println(lord1);
         System.out.println(lord2);
+        lord.test();
     }
 }
