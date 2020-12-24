@@ -1,4 +1,5 @@
-package itcast.day09.demo;
+package itcast.chap09.demo;
+
 
 public class Main {
     public static void main(String[] args) {

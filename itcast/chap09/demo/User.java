@@ -1,4 +1,4 @@
-package itcast.day09.demo;
+package itcast.chap09.demo;
 
 abstract class User {
     String name;

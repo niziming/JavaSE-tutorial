@@ -1,4 +1,4 @@
-package itcast.day09;
+package itcast.chap09;
 
 public class Child extends Father {
     int num = 6;
