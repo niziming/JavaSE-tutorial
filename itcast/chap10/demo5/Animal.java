@@ -1,5 +1,7 @@
-package itcast.day10.demo5;
+package itcast.chap10.demo5;
 
-public abstract class Animal {
-    abstract void eat ();
+public class Animal {
+    void eat () {
+        System.out.println("动物可以吃东西");
+    }
 }

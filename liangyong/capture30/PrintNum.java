@@ -10,7 +10,7 @@ public class PrintNum implements Runnable{
 
 	@Override
 	public void run(){
-		// Thread thread4 = new Thread(new PrintChar('C', 40));
+		// Thread thread4 = new Thread(new PrintChar('Cat', 40));
 		// thread4.start();
 		try {
 			for (int i = 0; i <= num; i++) {
