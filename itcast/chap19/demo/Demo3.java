@@ -5,7 +5,7 @@ import java.io.File;
 public class Demo3 {
     public static void main(String[] args) {
         File dir = new File("day20");
-        printDir2(dir, "Demo1");
+        printDir2(dir, "ThreadUsed");
     }
 
     private static void printDir2(File dir, String filname) {

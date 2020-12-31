@@ -1,5 +1,6 @@
 package itcast.chap14.set;
 
+import java.util.Collection;
 import java.util.HashSet;
 
 public class HashSetUsed {

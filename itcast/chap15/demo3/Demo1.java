@@ -1,14 +1,14 @@
-package itcast.day15.demo3;
+package itcast.chap15.demo3;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
 
-public class Demo1 {
+public class demo1 {
     public static void main(String[] args) {
-        List<String> list=new ArrayList<>();
-        list.add("abc");
-        list.add("def");
-        list.add("ghi");
-        System.out.println(list);
+        ArrayList<Integer> objects = new ArrayList<>();
+        Collections.addAll(objects, new Integer[]{10, 20});
+        System.out.println(objects);
+
+
     }
 }

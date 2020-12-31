@@ -1,4 +1,4 @@
-package itcast.day15.demo;
+package itcast.chap15;
 
 public class Student {
     String name;

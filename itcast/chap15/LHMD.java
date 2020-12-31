@@ -1,4 +1,4 @@
-package itcast.day15.demo1;
+package itcast.chap15;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
