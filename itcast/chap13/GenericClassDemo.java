@@ -1,4 +1,4 @@
-package itcast.day13;
+package itcast.chap13;
 
 public class GenericClassDemo {
     public static void main(String[] args) {

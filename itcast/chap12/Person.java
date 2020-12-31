@@ -1,4 +1,4 @@
-package itcast.day12;
+package itcast.chap12;
 
 import java.util.Objects;
 

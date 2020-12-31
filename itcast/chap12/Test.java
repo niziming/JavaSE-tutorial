@@ -1,4 +1,4 @@
-package itcast.day12;
+package itcast.chap12;
 
 public class Test {
     public static void main(String[] args) {

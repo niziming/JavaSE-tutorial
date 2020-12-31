@@ -1,4 +1,4 @@
-package itcast.day13;
+package itcast.chap13;
 
 public class VisualAccumulator {
     public static void main(String[] args) {

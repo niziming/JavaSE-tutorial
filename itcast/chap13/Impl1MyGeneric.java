@@ -1,4 +1,4 @@
-package itcast.day13;
+package itcast.chap13;
 
 public class Impl1MyGeneric<E> implements MyGeneric<E> {
     E e;

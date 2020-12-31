@@ -1,4 +1,4 @@
-package itcast.day13;
+package itcast.chap13;
 
 /*
  * 定义类时确定泛型类型

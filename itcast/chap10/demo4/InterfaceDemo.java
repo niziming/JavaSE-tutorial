@@ -10,6 +10,6 @@ public interface InterfaceDemo {
     // 静态方法
     // 接口中，存在同名的静态方法并不会冲突，原因是只能通过各自接口名访问静态方法。
     static void staticMethod () {
-        System.out.println("demo static method");
+        System.out.println("demo3 static method");
     }
 }

@@ -26,7 +26,7 @@ public class Son extends Father implements InterfaceDemo, InterfaceDemo1 {
 
     @Override
     public void method1() {
-        System.out.println("实现demo demo1 中重复的默认方法");
+        System.out.println("实现demo CollectionUsed 中重复的默认方法");
     }
 
     @Override

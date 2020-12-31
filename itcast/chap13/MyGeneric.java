@@ -1,4 +1,4 @@
-package itcast.day13;
+package itcast.chap13;
 
 public interface MyGeneric<E> {
     void add(E e);
