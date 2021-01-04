@@ -1,9 +1,10 @@
-package itcast.day18.demo;
+package itcast.chap18.demo;
 
 public class BaoziPu extends Thread{
     private Baozi b;
 
     public BaoziPu(String name, Baozi b) {
+        // 包子铺名称
         super(name);
         this.b = b;
     }
@@ -13,7 +14,7 @@ public class BaoziPu extends Thread{
         int count = 0;
         while (true){
             synchronized (b) {
-                if (b.flag == true){
+                if (b.flag){
                     try {
                         b.wait();
                     } catch (InterruptedException e) {
@@ -31,7 +32,6 @@ public class BaoziPu extends Thread{
                 count++ ;
                 b.flag = true;
                 System.out.println("包子做好了: " + b.pier + b.xianer);
-                System.out.println("吃货开始吃包子");
                 b.notify();
             }
         }

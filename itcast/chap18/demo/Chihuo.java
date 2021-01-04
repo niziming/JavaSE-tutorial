@@ -1,4 +1,4 @@
-package itcast.day18.demo;
+package itcast.chap18.demo;
 
 public class Chihuo extends Thread{
     Baozi b;
@@ -10,16 +10,21 @@ public class Chihuo extends Thread{
     public void run() {
         while (true){
             synchronized (b) {
-                if (b.flag == false) {
+                if (b.flag) {
+                    System.out.println("吃货正在吃: " + b.pier + b.xianer + " 包子");
                     try {
-                        b.wait();
+                        Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    b.flag = false;
+                    b.notify();
                 }
-                System.out.println("吃货正在吃: " + b.pier + b.xianer + " 包子");
-                b.flag = false;
-                b.notify();
+                try {
+                    b.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }

@@ -1,4 +1,4 @@
-package itcast.day18.demo;
+package itcast.chap18.demo;
 
 public class Baozi {
     String pier;
