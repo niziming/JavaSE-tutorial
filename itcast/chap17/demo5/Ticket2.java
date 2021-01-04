@@ -8,6 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Ticket2 implements Runnable{
     private int ticket = 100;
     Lock lock = new ReentrantLock();
+
     @Override
     public void run() {
         while (true) {
