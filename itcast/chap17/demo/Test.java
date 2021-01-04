@@ -1,4 +1,4 @@
-package itcast.day17.demo;
+package itcast.chap17.demo;
 
 public class Test implements Runnable {
     static Object o = new Object();

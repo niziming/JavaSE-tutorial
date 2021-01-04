@@ -1,10 +1,10 @@
-package itcast.day17.demo;
+package itcast.chap17.demo;
 
 public class WaitingTest {
     static Object obj = new Object();
 
     public static void main(String[] args) {
-        MyThread myThread = new MyThread();
+        MyThread myThread = new MyThread("ziming");
         try {
             new Object().wait(1000);
         } catch (InterruptedException e) {

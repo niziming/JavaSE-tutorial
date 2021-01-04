@@ -1,4 +1,4 @@
-package itcast.day17.demo;
+package itcast.chap17.demo;
 
 public class Mian {
     public static void main(String[] args) {
