@@ -3,62 +3,30 @@ package itcast.chap22.demo3;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class Server {
     public static void main(String[] args) throws IOException {
-        ServerSocket ss = new ServerSocket(6666);
-        Socket accept = ss.accept();
-        // 线程池
-        ExecutorService service = Executors.newFixedThreadPool(4);
-
-        try {
-            while (true) {
-                service.submit(() -> {
-                    try {
-                        getAccept(ss);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                });
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-    static void getAccept (ServerSocket ss) throws IOException {
-        Socket accept = ss.accept();
-        OutputStream sos = accept.getOutputStream();
-        InputStream sis = accept.getInputStream();
-        BufferedOutputStream sbos = new BufferedOutputStream(sos);
-        BufferedInputStream sbis = new BufferedInputStream(sis);
-        byte[] bytes = new byte[128];
-        int len;
-        while ((len = sbis.read(bytes)) != -1) {
-            String s = new String(bytes, 0, len);
-            System.out.println(Thread.currentThread().getName() + ": " + s);
-            if (s.equals("关闭连接")) {
-                closeAll(sbis, sbos, sis, sos);
-            }
-        }
-    }
-
-    private static void closeAll(
-            BufferedInputStream sbis,
-            BufferedOutputStream sbos,
-            InputStream sis,
-            OutputStream sos
-    ) {
-        try {
-            sbis.close();
-            sbos.close();
-            sis.close();
-            sos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        System.out.println("服务器 启动.....");
+        // 1. 创建服务端ServerSocket
+        ServerSocket serverSocket = new ServerSocket(6666);
+        // 2. 循环接收,建立连接
+        while (true) {
+            Socket accept = serverSocket.accept();
+           /*
+           3. socket对象交给子线程处理,进行读写操作
+               Runnable接口中,只有一个run方法,使用lambda表达式简化格式
+            */
+            new Thread(() -> {
+                try (
+                    BufferedInputStream sbis = new BufferedInputStream(accept.getInputStream());
+                ) {
+                    byte[] b = new byte[64];
+                    sbis.read(b);
+                    System.out.println("服务器接收: " + new String(b));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }).start();
         }
     }
 }
