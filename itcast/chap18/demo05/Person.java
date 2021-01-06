@@ -1,4 +1,4 @@
-package itcast.day18.demo05;
+package itcast.chap18.demo05;
 
 public class Person {
     String name;

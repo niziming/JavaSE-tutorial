@@ -8,11 +8,11 @@ public class Client {
     public static void main(String[] args) throws IOException {
         Socket socket = new Socket("", 6666);
         try (
-                OutputStream cos = socket.getOutputStream();
-                BufferedOutputStream cbos = new BufferedOutputStream(cos);
-                BufferedInputStream cbis = new BufferedInputStream(
-                        new FileInputStream("itcast/chap22/demo2/index.html")
-                );
+            OutputStream cos = socket.getOutputStream();
+            BufferedOutputStream cbos = new BufferedOutputStream(cos);
+            BufferedInputStream cbis = new BufferedInputStream(
+                new FileInputStream("itcast/chap22/demo2/index.html")
+            );
         ) {
             byte[] bytes = new byte[8*1024];
             int len;
