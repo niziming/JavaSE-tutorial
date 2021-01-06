@@ -8,23 +8,31 @@ import java.util.concurrent.Executors;
 
 public class Client {
     String clientId;
-
-    Client(String host, int port, String msg) {
+    Socket s;
+    BufferedOutputStream cbos;
+    Client(String host, int port) {
         clientId = UUID.randomUUID().toString();
-        try (
-            Socket s = new Socket(host, port);
-            BufferedOutputStream cbos = new BufferedOutputStream(s.getOutputStream());
-        ) {
-            cbos.write(new String(clientId + ": " + msg).getBytes());
-            return;
+        try {
+            s = new Socket(host, port);
+            cbos = new BufferedOutputStream(s.getOutputStream());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    void sendMsg(String msg) throws IOException {
+        System.out.println(clientId + "发送" + msg);
+        cbos.write(new String(clientId + ": " + msg).getBytes());
+    }
+
+    void close () throws IOException{
+        cbos.close();
+        s.close();
+    }
+
     public static void main(String[] args) {
         System.out.println("客户端启动");
-        ExecutorService service = Executors.newFixedThreadPool(4);
+        ExecutorService service = Executors.newFixedThreadPool(1);
         // try (
         //     Socket s = new Socket("", 6666);
         //     BufferedOutputStream cbos = new BufferedOutputStream(s.getOutputStream());
@@ -36,10 +44,16 @@ public class Client {
 
         while (true) {
             service.submit(() -> {
-                new Client("", 6666, new Double(Math.random() * 10.0).toString());
+                Client client = new Client("", 6666);
                 try {
-                    Thread.sleep(3000);
-                } catch (InterruptedException e) {
+                    client.sendMsg("hello");
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    client.close();
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             });

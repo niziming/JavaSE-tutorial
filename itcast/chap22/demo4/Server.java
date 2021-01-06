@@ -21,8 +21,8 @@ public class Server {
                         BufferedInputStream sbis = new BufferedInputStream(inputStream);
                     ) {
                     byte[] bytes = new byte[64];
-                    sbis.read(bytes);
-                    System.out.println(Thread.currentThread().getName() + ":" + new String(bytes));
+                    int len = sbis.read(bytes);
+                    System.out.println(Thread.currentThread().getName() + ":" + new String(bytes, 0, len));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
