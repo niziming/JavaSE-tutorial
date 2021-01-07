@@ -8,6 +8,9 @@ public class GenericMethod {
     public <E> void show1 (E e) {
         System.out.println(e.getClass());
     }
+    public static <E> void show2 (E e) {
+        System.out.println(e.getClass());
+    }
 
     public static void main(String[] args) {
         GenericMethod genericMethod = new GenericMethod();

@@ -11,6 +11,10 @@ public class MyGenericClass<MPV> {
         this.mvp = mvp;
     }
 
+    public MPV setMvp1(MPV mvp) {
+        return mvp;
+    }
+
     // Used
     public static void main(String[] args) {
         MyGenericClass mg = new MyGenericClass<>();

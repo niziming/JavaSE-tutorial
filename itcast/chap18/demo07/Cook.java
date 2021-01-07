@@ -19,6 +19,6 @@ public interface Cook {
         // 之前的做法
         // invokeCook(() -> System.out.println("做饭"));
         // 有且仅有一个参数时
-        invokeCook(1, a -> System.out.println("做饭"));
+        invokeCook(1, a -> System.out.println("做饭" + a));
     }
 }
