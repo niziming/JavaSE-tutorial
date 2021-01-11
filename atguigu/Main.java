@@ -10,11 +10,10 @@ public class Main {
         //     if (!file.exists()) file.mkdir();
         // }
 
-        cutFile("atguigu/chap1", "atguigu/chap2");
+        cutFile("atguigu/chap1overview", "atguigu/chap2grammar");
     }
     // file cut
     public static File cutFile(String source, String target){
-
 
         File targetFile = null;
 
