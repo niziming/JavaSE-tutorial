@@ -533,7 +533,7 @@ public class Demo11SystemArrayCopy {
 ~~~java
 public class StringDemo {
     public static void main(String[] args) {
-        String s = "Hello";
+        String s = HelloTest;
         s += "World";
         System.out.println(s);
     }
@@ -623,7 +623,7 @@ public class Demo02StringBuilder {
 public class Demo16StringBuilder {
     public static void main(String[] args) {
         // 链式创建
-        StringBuilder sb = new StringBuilder("Hello").append("World").append("Java");
+        StringBuilder sb = new StringBuilder(HelloTest).append("World").append("Java");
         // 调用方法
         String str = sb.toString();
         System.out.println(str); // HelloWorldJava

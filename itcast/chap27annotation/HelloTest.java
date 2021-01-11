@@ -1,6 +1,6 @@
 package itcast.chap27annotation;
 
-public class Hello {
+public class HelloTest {
     // @MyTarget //修饰属性报错
     // String name;
     public static void main(String[] args) {

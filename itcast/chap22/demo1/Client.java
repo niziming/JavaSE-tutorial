@@ -14,7 +14,7 @@ public class Client {
                 InputStream cis = socket.getInputStream();
         ) {
             byte[] bytes = new byte[1024];
-            cos.write("Hello Java network programing".getBytes());
+            cos.write("HelloTest Java network programing".getBytes());
             cis.read(bytes);
             System.out.print("接收服务器响应: ");
             System.out.println(new String(bytes));

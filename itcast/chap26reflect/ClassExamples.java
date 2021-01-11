@@ -9,7 +9,7 @@ public class ClassExamples {
     public static void method() {
         // 通过类型class静态变量
         Class<String> clz1 = String.class;
-        String str = "Hello";
+        String str = "HelloTest";
         // 通过对象的getClass()方法
         Class clz2 = str.getClass();
         Class clz3 = int.class;

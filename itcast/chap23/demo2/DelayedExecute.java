@@ -16,7 +16,7 @@ public class DelayedExecute {
 
 
     public static void main(String[] args) {
-        String a = "Hello";
+        String a = "HelloTest";
         String b = "World";
         String c = "Java";
         log(1, "hello");
