@@ -56,12 +56,12 @@ public class IOEHandle {
 
         FileWriter fw2 = new FileWriter("itcast/chap20/demo6/test.txt");
         FileReader fr = new FileReader("itcast/chap20/demo6/test.txt");
-
-        try (fw2; fr){
-            // do
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        //
+        // try (fw2; fr){
+        //     // do
+        // } catch (IOException e) {
+        //     e.printStackTrace();
+        // }
 
     }
 }
