@@ -45,6 +45,9 @@ public class Difference {
             Student value = entry.getValue();
             System.out.println(key + ": " + value);
         }
-
+        HashMap h = new HashMap();
+        h.put(null, "helol");
+        h.put(null, "helo");
+        System.out.println("h = " + h);
     }
 }

@@ -1,5 +1,4 @@
-package com.atguigu.interview;
-
+package atguigu.chap8multi_thread.尚硅谷_宋红康_第8章_多线程;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -15,8 +14,22 @@ class MyThread implements Runnable {
 
 }
 
+class MyThread1 extends Thread {
+
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName() + ": MyThread1.run");
+	}
+}
+
 public class ThreadPool {
 	public static void main(String[] args) {
+		// poolTest();
+		new MyThread1().start();
+
+	}
+
+	private static void poolTest() {
 		// 1.调用Executors的newFixedThreadPool(),返回指定线程数量的ExecutorService
 		ExecutorService pool = Executors.newFixedThreadPool(10);
 		// 2.将Runnable实现类的对象作为形参传递给ExecutorService的submit()方法中，开启线程
@@ -26,6 +39,5 @@ public class ThreadPool {
 		pool.execute(new MyThread());
 		// 3.结束线程的使用
 		pool.shutdown();
-
 	}
 }
