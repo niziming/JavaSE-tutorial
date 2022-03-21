@@ -8,7 +8,7 @@ package data_structure.queue;
  * <p>
  * 如上图所示，队列是典型的 FIFO 数据结构。插入（insert）操作也称作入队（enqueue），新元素始终被添加在队列的末尾。 删除（delete）操作也被称为出队（dequeue)。 你只能移除第一个元素。
  */
-public class MyQueue1<E> {
+public class Queue<E> {
   Node head; // 头
   Node tail; // 尾部
   int size; // 队列的大小
@@ -26,6 +26,14 @@ public class MyQueue1<E> {
       tail = node;
     }
     size++;
+  }
+
+
+  /**
+   * 长度
+   */
+  public int size() {
+    return size;
   }
 
   /**
@@ -50,6 +58,30 @@ public class MyQueue1<E> {
     System.out.println(temp);
   }
 
+  public Node getHead() {
+    return head;
+  }
+
+  public void setHead(Node head) {
+    this.head = head;
+  }
+
+  public Node getTail() {
+    return tail;
+  }
+
+  public void setTail(Node tail) {
+    this.tail = tail;
+  }
+
+  public int getSize() {
+    return size;
+  }
+
+  public void setSize(int size) {
+    this.size = size;
+  }
+
 
   /**
    * 节点
@@ -71,7 +103,7 @@ public class MyQueue1<E> {
   }
 
   public static void main(String[] args) {
-    MyQueue1<Integer> queue = new MyQueue1<>();
+    Queue<Integer> queue = new Queue<>();
     queue.put(1);
     queue.put(2);
     queue.put(3);
