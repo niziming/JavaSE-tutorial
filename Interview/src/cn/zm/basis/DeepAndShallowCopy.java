@@ -21,6 +21,19 @@ public class DeepAndShallowCopy {
     System.out.println(person3 == person4);
     System.out.println(person3.getAddress() == person4.getAddress());
 
+    System.out.println("------------------");
+
+    // 引用拷贝
+    PersonReferenceCopy personReferenceCopy = new PersonReferenceCopy();
+    PersonReferenceCopy personReferenceCopy1 = personReferenceCopy;
+    System.out.println(personReferenceCopy == personReferenceCopy1);
+    System.out.println(personReferenceCopy.hashCode());
+    System.out.println(personReferenceCopy1.hashCode());
+    personReferenceCopy.setAddress("成都");
+    System.out.println(personReferenceCopy);
+    System.out.println(personReferenceCopy1);
+
+
   }
 
   public static class Address implements Cloneable{
@@ -111,4 +124,23 @@ public class DeepAndShallowCopy {
     }
   }
 
+  private static class PersonReferenceCopy {
+    private String address;
+    public PersonReferenceCopy() {}
+
+    @Override
+    public String toString() {
+      return "PersonReferenceCopy{" +
+        "address='" + address + '\'' +
+        '}';
+    }
+
+    public String getAddress() {
+      return address;
+    }
+
+    public void setAddress(String address) {
+      this.address = address;
+    }
+  }
 }
