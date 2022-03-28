@@ -33,5 +33,16 @@ public class Shop implements InvocationHandler {
     System.out.println("------------------");
     SellWine o2 = new MaotaiWine();
     o2.sellWine();
+
+    System.out.println("------------------");
+
+    SellWine o1 = (SellWine) Proxy.newProxyInstance(
+      WuNiangYe.class.getClassLoader(),
+      WuNiangYe.class.getInterfaces(),
+      new Shop(new WuNiangYe())
+    );
+
+    o1.sellWine();
+
   }
 }
