@@ -112,11 +112,39 @@ public class Reflection {
   //region 动态代理
   public static class ActiveProxy {
 
+    //region 2.CGLIB 动态代理
+    // JDK 动态代理有一个最致命的问题是其只能代理实现了接口的类。
+    // 为了解决这个问题，我们可以用 CGLIB 动态代理机制来避免。
+    static class CGLIBProxy {
+
+
+
+    }
+    //endregion
+
     //region 1.JDK 动态代理机制
+    // JDK 动态代理有一个最致命的问题是其只能代理实现了接口的类。
     // 在 Java 动态代理机制中 InvocationHandler 接口和 Proxy 类是核心。
     static class JdkProxy {
+      public static void main(String[] args) {
+        SmsService proxy = JdkProxyFactory.getProxy(new SmsServiceImpl());
+        proxy.sendSms("jdkProxy");
 
+        SmsService proxy1 = JdkProxyFactory.getProxy(new IphoneSms());
+        proxy1.sendSms("jdkProxy1");
+      }
 
+      //region 4.获取代理对象的工厂类
+      static class JdkProxyFactory<C>{
+        public static <C> C getProxy(Object target) {
+          return (C) Proxy.newProxyInstance(
+            target.getClass().getClassLoader(),
+            target.getClass().getInterfaces(),
+            new SmsProxy(target)
+          );
+        }
+      }
+      //endregion
 
       //region 3.定义一个 JDK 动态代理类
       static class SmsProxy implements InvocationHandler {
@@ -154,6 +182,18 @@ public class Reflection {
         @Override
         public String sendSms(String msg) {
           System.out.println("send sms " + msg);
+          return msg;
+        }
+      }
+      //endregion
+
+
+      //region 2.1 iphone send msg
+      static class IphoneSms implements SmsService {
+
+        @Override
+        public String sendSms(String msg) {
+          System.out.println("iphone " + msg);
           return msg;
         }
       }
