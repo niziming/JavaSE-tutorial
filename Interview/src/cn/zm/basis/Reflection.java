@@ -1,6 +1,11 @@
 package cn.zm.basis;
 
 
+import net.sf.cglib.proxy.Enhancer;
+import net.sf.cglib.proxy.MethodInterceptor;
+import net.sf.cglib.proxy.MethodProxy;
+
+import java.lang.annotation.Annotation;
 import java.lang.reflect.*;
 import java.util.Arrays;
 
@@ -9,7 +14,8 @@ public class Reflection {
   // 反射基本操作
   public static class TargetObject {
     private String value;
-    TargetObject () {
+
+    TargetObject() {
       this.value = "TargetObject";
     }
 
@@ -33,7 +39,8 @@ public class Reflection {
 
     }
 
-    private static void privateMethod() {}
+    private static void privateMethod() {
+    }
   }
 
   // 获取类的 四种方法
@@ -101,6 +108,7 @@ public class Reflection {
         System.out.println("send sms " + msg);
       }
     }
+
     // 定义一个接口
     interface SmsService {
       void sendSms(String msg);
@@ -117,7 +125,69 @@ public class Reflection {
     // 为了解决这个问题，我们可以用 CGLIB 动态代理机制来避免。
     static class CGLIBProxy {
 
+      public static void main(String[] args) {
+        AliSmsService proxy = CglibProxyFactory.getProxy(AliSmsService.class);
+        proxy.send("cglib");
+        TencentSmsService tss = CglibProxyFactory.getProxy(TencentSmsService.class);
+        tss.tSend("我是腾讯邮件");
 
+      }
+
+      // 3.获取代理类
+      static class CglibProxyFactory <C> {
+        public static <C> C getProxy(Class<?> clazz) {
+          // 创建动态代理增强类
+          Enhancer enhancer = new Enhancer();
+          // 设置类加载器
+          enhancer.setClassLoader(clazz.getClassLoader());
+          // 设置被代理类
+          enhancer.setSuperclass(clazz);
+          // 设置方法拦截器
+          enhancer.setCallback(new MyMethodInterceptor());
+          // 创建代理类
+          return (C) enhancer.create();
+        }
+      }
+
+      //region 2.自定义 MethodInterceptor（方法拦截器）
+      static class MyMethodInterceptor implements MethodInterceptor {
+        // obj :被代理的对象（需要增强的对象）
+        // method :被拦截的方法（需要增强的方法）
+        // args :方法入参
+        // proxy :用于调用原始方法
+        @Override
+        public Object intercept(Object o, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+          System.out.println("增强前 = " + method.getName());
+          Annotation[] annotations = method.getDeclaredAnnotations();
+          for (Annotation annotation : annotations) {
+            System.out.println(annotation);
+          }
+
+          Object o1 = methodProxy.invokeSuper(o, args);
+          System.out.println("增强后 = " + method.getName());
+          return o1;
+        }
+      }
+      //endregion
+
+      //region 1.实现一个使用阿里云发送短信的类
+      static class AliSmsService {
+        public String send(String msg) {
+          System.out.println("send sms " + msg);
+          return "send sms " + msg;
+        }
+      }
+      //endregion
+
+      //region 1.1实现一个使用阿里云发送短信的类
+      static class TencentSmsService {
+        @MyAnno
+        public String tSend(String msg) {
+          System.out.println("TencentSmsService sms " + msg);
+          return "TencentSmsService sms " + msg;
+        }
+      }
+      //endregion
 
     }
     //endregion
@@ -135,7 +205,7 @@ public class Reflection {
       }
 
       //region 4.获取代理对象的工厂类
-      static class JdkProxyFactory<C>{
+      static class JdkProxyFactory<C> {
         public static <C> C getProxy(Object target) {
           return (C) Proxy.newProxyInstance(
             target.getClass().getClassLoader(),
@@ -158,12 +228,12 @@ public class Reflection {
         }
 
         /**
-         * @param proxy 动态生成的代理类
+         * @param proxy  动态生成的代理类
          * @param method 与代理类对象调用的方法相对应
-         * @param args 当前 method 方法的参数
+         * @param args   当前 method 方法的参数
+         * @return java.lang.Object
          * @author 十渊
          * @date 2022/3/28 11:28
-         * @return java.lang.Object
          */
         @Override
         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
@@ -200,7 +270,9 @@ public class Reflection {
       //endregion
 
       //region 1.定义发送短信的接口
-      interface SmsService {        String sendSms(String msg);      }
+      interface SmsService {
+        String sendSms(String msg);
+      }
       //endregion
     }
     //endregion
