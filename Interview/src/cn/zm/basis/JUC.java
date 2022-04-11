@@ -5,6 +5,26 @@ import java.lang.management.ThreadInfo;
 import java.lang.management.ThreadMXBean;
 
 public class JUC {
+
+  //region Synchronized关键字
+  static class Synchronized {
+    static int i = 0;
+    public synchronized static void method() {
+      i += 1;
+      // todo
+      System.out.println(Thread.currentThread().getName() + "execute method " + i);
+    }
+
+    public static void main(String[] args) {
+      for (int i = 0; i < 100; i++) {
+        new Thread(() -> method(), "线程1").start();
+        new Thread(() -> method(), "线程2").start();
+      }
+    }
+
+  }
+  //endregion
+
   //region 多线程
   static class MultiThread {
     public static void main(String[] args) {
@@ -132,6 +152,5 @@ public class JUC {
       sleepAndWait.method2();
     }
   }
-  //endregion
   //endregion
 }
