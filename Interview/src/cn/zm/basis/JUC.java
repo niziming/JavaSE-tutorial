@@ -19,83 +19,73 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
 
 public class JUC {
+  //region AQS & CAS
+  public static class AQSExample {
+    //region cas
+    public static void cas() {
+      // CAS 的原理是拿期望的值和原本的一个值作比较，如果相同则更新成新的值。
+      // UnSafe 类的 objectFieldOffset() 方法是一个本地方法，
+      // 这个方法是用来拿到“原来的值”的内存地址，返回值是 valueOffset。
+      // 另外 value 是一个 volatile 变量，在内存中可见，
+      // 因此 JVM 可以保证任何时刻任何线程总能拿到该变量的最新值。
+      Unsafe.getUnsafe().compareAndSwapInt(new Object(), 0, 0, 1);
+    }
+    //endregion
 
-  //region Atomic 原子类
-  // Atomic 翻译成中文是原子的意思。在化学上，我们知道原子是构成一般物质的最小单位，
-  // 在化学反应中是不可分割的。在我们这里 Atomic 是指一个操作是不可中断的。
-  // 即使是在多个线程一起执行的时候，一个操作一旦开始，就不会被其他线程干扰。
+    //region AQS
+    // AQS 核心思想是，如果被请求的共享资源空闲，则将当前请求资源的线程设置为有效的工作线程，
+    // 并且将共享资源设置为锁定状态。如果被请求的共享资源被占用，
+    // 那么就需要一套线程阻塞等待以及被唤醒时锁分配的机制，这个机制 AQS 是用 CLH 队列锁实现的，
+    // 即将暂时获取不到锁的线程加入到队列中
 
-  // 并发包 java.util.concurrent 的原子类都存放在java.util.concurrent.atomic下,如下图所示。
-  public static class AtomicExample {
-
-
-    //region AQS & CAS
-    public static class AQSExample {
-      //region cas
-      public static void cas() {
-        // CAS 的原理是拿期望的值和原本的一个值作比较，如果相同则更新成新的值。
-        // UnSafe 类的 objectFieldOffset() 方法是一个本地方法，
-        // 这个方法是用来拿到“原来的值”的内存地址，返回值是 valueOffset。
-        // 另外 value 是一个 volatile 变量，在内存中可见，
-        // 因此 JVM 可以保证任何时刻任何线程总能拿到该变量的最新值。
-        Unsafe.getUnsafe().compareAndSwapInt(new Object(), 0, 0, 1);
-      }
-      //endregion
-
-      //region AQS
-      // AQS 核心思想是，如果被请求的共享资源空闲，则将当前请求资源的线程设置为有效的工作线程，
-      // 并且将共享资源设置为锁定状态。如果被请求的共享资源被占用，
-      // 那么就需要一套线程阻塞等待以及被唤醒时锁分配的机制，这个机制 AQS 是用 CLH 队列锁实现的，
-      // 即将暂时获取不到锁的线程加入到队列中
+    /**
+     * AQS 组件总结
+     * Semaphore(信号量)-允许多个线程同时访问： synchronized 和 ReentrantLock 都是一次只允许一个线程访问某个资源，Semaphore(信号量)可以指定多个线程同时访问某个资源。
+     * CountDownLatch （倒计时器）： CountDownLatch 是一个同步工具类，用来协调多个线程之间的同步。这个工具通常用来控制线程等待，它可以让某一个线程等待直到倒计时结束，再开始执行。
+     * CyclicBarrier(循环栅栏)： CyclicBarrier 和 CountDownLatch 非常类似，它也可以实现线程间的技术等待，但是它的功能比 CountDownLatch 更加复杂和强大。主要应用场景和 CountDownLatch 类似。CyclicBarrier 的字面意思是可循环使用（Cyclic）的屏障（Barrier）。它要做的事情是，让一组线程到达一个屏障（也可以叫同步点）时被阻塞，直到最后一个线程到达屏障时，屏障才会开门，所有被屏障拦截的线程才会继续干活。CyclicBarrier 默认的构造方法是 CyclicBarrier(int parties)，其参数表示屏障拦截的线程数量，每个线程调用 await() 方法告诉 CyclicBarrier 我已经到达了屏障，然后当前线程被阻塞。
+     */
+    //region CountDownLatch
+    //  用过 CountDownLatch 么？什么场景下用的？
+    // CountDownLatch 的作用就是 允许 count 个线程阻塞在一个地方，直至所有线程的任务都执行完毕。之前在项目中，有一个使用多线程读取多个文件处理的场景，我用到了 CountDownLatch 。具体场景是下面这样的：
+    //
+    // 我们要读取处理 6 个文件，这 6 个任务都是没有执行顺序依赖的任务，但是我们需要返回给用户的时候将这几个文件的处理的结果进行统计整理。
+    //
+    // 为此我们定义了一个线程池和 count 为 6 的CountDownLatch对象 。使用线程池处理读取任务，每一个线程处理完之后就将 count-1，调用CountDownLatch对象的 await()方法，直到所有文件读取完之后，才会接着执行后面的逻辑。
+    //
+    // 代码是下面这样的：
+    public static class CountDownLatchExample {
+      static final int THREAD_COUNT = 6;
+      // 前面使用的线程池
+      static ThreadPoolExecutor threadPool = ThreadPool.ThreadPoolExecutorExample.getThreadPool();
 
       /**
-       * AQS 组件总结
-       * Semaphore(信号量)-允许多个线程同时访问： synchronized 和 ReentrantLock 都是一次只允许一个线程访问某个资源，Semaphore(信号量)可以指定多个线程同时访问某个资源。
-       * CountDownLatch （倒计时器）： CountDownLatch 是一个同步工具类，用来协调多个线程之间的同步。这个工具通常用来控制线程等待，它可以让某一个线程等待直到倒计时结束，再开始执行。
-       * CyclicBarrier(循环栅栏)： CyclicBarrier 和 CountDownLatch 非常类似，它也可以实现线程间的技术等待，但是它的功能比 CountDownLatch 更加复杂和强大。主要应用场景和 CountDownLatch 类似。CyclicBarrier 的字面意思是可循环使用（Cyclic）的屏障（Barrier）。它要做的事情是，让一组线程到达一个屏障（也可以叫同步点）时被阻塞，直到最后一个线程到达屏障时，屏障才会开门，所有被屏障拦截的线程才会继续干活。CyclicBarrier 默认的构造方法是 CyclicBarrier(int parties)，其参数表示屏障拦截的线程数量，每个线程调用 await() 方法告诉 CyclicBarrier 我已经到达了屏障，然后当前线程被阻塞。
+       * Used
        */
-      //region CountDownLatch
-      //  用过 CountDownLatch 么？什么场景下用的？
-      // CountDownLatch 的作用就是 允许 count 个线程阻塞在一个地方，直至所有线程的任务都执行完毕。之前在项目中，有一个使用多线程读取多个文件处理的场景，我用到了 CountDownLatch 。具体场景是下面这样的：
-      //
-      // 我们要读取处理 6 个文件，这 6 个任务都是没有执行顺序依赖的任务，但是我们需要返回给用户的时候将这几个文件的处理的结果进行统计整理。
-      //
-      // 为此我们定义了一个线程池和 count 为 6 的CountDownLatch对象 。使用线程池处理读取任务，每一个线程处理完之后就将 count-1，调用CountDownLatch对象的 await()方法，直到所有文件读取完之后，才会接着执行后面的逻辑。
-      //
-      // 代码是下面这样的：
-      public static class CountDownLatchExample {
-        static final int THREAD_COUNT = 6;
-        // 前面使用的线程池
-        static ThreadPoolExecutor threadPool = ThreadPool.ThreadPoolExecutorExample.getThreadPool();
+      public static void countDownLatchUsed() {
+        final CountDownLatch countDownLatch = new CountDownLatch(THREAD_COUNT);
 
-        /**
-         * Used
-         */
-        public static void countDownLatchUsed() {
-          final CountDownLatch countDownLatch = new CountDownLatch(THREAD_COUNT);
-
-          for (int i = 0; i < THREAD_COUNT; i++) {
-            final int THREAD_NUM = i;
-            threadPool.execute(() -> {
-              try {
-                System.out.println(THREAD_NUM + Thread.currentThread().getName() + "-文件处理完成 ");
-              } catch (Exception e) {
-                e.printStackTrace();
-              } finally {
-                countDownLatch.countDown();
-              }
-            });
-          }
-
-          try {
-            countDownLatch.await();
-          } catch (InterruptedException e) {
-            e.printStackTrace();
-          }
-          threadPool.shutdown();
-          System.out.println("完成");
-
+        for (int i = 0; i < THREAD_COUNT; i++) {
+          final int THREAD_NUM = i;
+          threadPool.execute(() -> {
+            try {
+              System.out.println(THREAD_NUM + Thread.currentThread().getName() + "-文件处理完成 ");
+            } catch (Exception e) {
+              e.printStackTrace();
+            } finally {
+              countDownLatch.countDown();
+            }
+          });
         }
+
+        try {
+          countDownLatch.await();
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+        }
+        threadPool.shutdown();
+        System.out.println("完成");
+
+      }
 
         /**
          * used 改进
@@ -110,10 +100,10 @@ public class JUC {
 
           for (int i = 0; i < THREAD_COUNT; i++) {
             final int THREAD_NUM = i;
-            CompletableFuture<Void> task = CompletableFuture.supplyAsync(() ->
+            CompletableFuture<String> task = CompletableFuture.supplyAsync(() ->
               {
                 System.out.println("任务" + THREAD_NUM);
-                return null;
+                return "null";
               }
             );
             tasks[i] = task;
@@ -130,47 +120,75 @@ public class JUC {
           System.out.println("全部处理完成");
         }
 
+
         /**
-         * used 改进2
-         *
-         * 上面的代码还可以继续优化，当任务过多的时候，
-         * 把每一个 task 都列出来不太现实，可以考虑通过循环来添加任务。
+         * completableFutureUsed
+         * <p>
+         * 有没有可以改进的地方呢？
+         * 可以使用 CompletableFuture 类来改进！Java8 的 CompletableFuture
+         * 提供了很多对多线程友好的方法，使用它可以很方便地为我们编写多线程程序，
+         * 什么异步、串行、并行或者等待所有线程执行完任务什么的都非常方便。
          */
-        public static void listCompletableFuture() {
-          List<String> paths = Arrays.asList("1", "2", "3", "4", "5", "6", "7");
+        public static void completableFutureUsed1() {
+          CompletableFuture<Integer> task = CompletableFuture.supplyAsync(() -> 1);
+          task.thenApplyAsync(re -> {
+            System.out.println(re);
+            return re + 1;
+          });
 
-          List<CompletableFuture<Object>> collect = paths.stream().map(path -> CompletableFuture.supplyAsync(() -> {
-            System.out.println(path + "文件正在处理");
-            return null;
-          })).collect(Collectors.toList());
-
-          CompletableFuture<Void> allFutures = CompletableFuture.allOf(collect.toArray(new CompletableFuture[collect.size()]));
-
-          try {
-            allFutures.join();
-          } catch (Exception e) {
-            e.printStackTrace();
-          }
-
-          System.out.println("all down");
-        }
-
-        public static void main(String[] args) throws InterruptedException {
-          listCompletableFuture();
-          // completableFutureUsed();
-          // countDownLatchUsed();
 
         }
+
+
+
+      /**
+       * used 改进2
+       *
+       * 上面的代码还可以继续优化，当任务过多的时候，
+       * 把每一个 task 都列出来不太现实，可以考虑通过循环来添加任务。
+       */
+      public static void listCompletableFuture() {
+        List<String> paths = Arrays.asList("1", "2", "3", "4", "5", "6", "7");
+
+        List<CompletableFuture<Object>> collect = paths.stream().map(path -> CompletableFuture.supplyAsync(() -> {
+          System.out.println(path + "文件正在处理");
+          return null;
+        })).collect(Collectors.toList());
+
+        CompletableFuture<Void> allFutures = CompletableFuture.allOf(collect.toArray(new CompletableFuture[collect.size()]));
+
+        try {
+          allFutures.join();
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+
+        System.out.println("all down");
+      }
+
+      public static void main(String[] args) throws InterruptedException {
+        // listCompletableFuture();
+        // completableFutureUsed();
+        completableFutureUsed1();
+        // countDownLatchUsed();
 
       }
-      //endregion
-
-      //endregion
-
 
     }
     //endregion
 
+    //endregion
+
+  }
+  //endregion
+
+  //region Atomic 原子类
+  // Atomic 翻译成中文是原子的意思。在化学上，我们知道原子是构成一般物质的最小单位，
+  // 在化学反应中是不可分割的。在我们这里 Atomic 是指一个操作是不可中断的。
+  // 即使是在多个线程一起执行的时候，一个操作一旦开始，就不会被其他线程干扰。
+
+  // 并发包 java.util.concurrent 的原子类都存放在java.util.concurrent.atomic下,如下图所示。
+  public static class AtomicExample {
     //region AtomicInteger Example
 
     /**
