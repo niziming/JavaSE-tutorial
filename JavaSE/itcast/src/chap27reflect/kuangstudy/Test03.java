@@ -11,7 +11,7 @@ public class Test03 {
         ClassLoader parent1 = parent.getParent();
         System.out.println("parent1 = " + parent1);
 
-        ClassLoader classLoader = Class.forName("itcast.chap27reflect.kuangstudy.Test03").getClassLoader();
+        ClassLoader classLoader = Class.forName("chap27reflect.kuangstudy.Test03").getClassLoader();
         System.out.println("classLoader = " + classLoader);
 
         String property = System.getProperty("java.class.path");

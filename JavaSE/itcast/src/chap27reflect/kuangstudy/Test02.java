@@ -12,7 +12,7 @@ public class Test02 {
 
         // 反射
         // try {
-            // Class<?> aClass = Class.forName("itcast.chap27reflect.kuangstudy.Son");
+            // Class<?> aClass = Class.forName("chap27reflect.kuangstudy.Son");
         // } catch (ClassNotFoundException e) {
         //     e.printStackTrace();
         // }

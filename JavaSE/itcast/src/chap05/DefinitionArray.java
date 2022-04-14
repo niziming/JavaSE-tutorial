@@ -1,6 +1,6 @@
 package chap05;
 
-import itcast.chap07.Student;
+import chap07.Student;
 
 public class DefinitionArray implements Cloneable {
     public static void main(String[] args) {

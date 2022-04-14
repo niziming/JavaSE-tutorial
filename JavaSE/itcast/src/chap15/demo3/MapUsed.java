@@ -1,4 +1,4 @@
-// package itcast.chap15.demo3;
+// package chap15.demo3;
 //
 // import java.io.Serializable;
 // import java.util.List;

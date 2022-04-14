@@ -15,8 +15,8 @@ public interface InterfaceDefinition {
     static void staticMethod () {
     }
 
-    // 私有方法：使用 private 修饰，供接口中的默认方法或者静态方法调用。
-    private void privateMethod () {
-        //do something
-    }
+    // // 私有方法：使用 private 修饰，供接口中的默认方法或者静态方法调用。
+    // private void privateMethod () {
+    //     //do something
+    // }
 }

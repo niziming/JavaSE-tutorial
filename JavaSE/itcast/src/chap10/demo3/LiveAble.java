@@ -18,29 +18,30 @@ public interface LiveAble {
     // 私有静态方法：默认方法和静态方法可以调用。
     // 如果一个接口中有多个默认方法，并且方法中有重复的内容，那么可以抽取出来，封装到私有方法中，供默认方法
     // 去调用。从设计的角度讲，私有的方法是对默认方法和静态方法的辅助。同学们在已学技术的基础上，可以自行测试。
-    default void defaultMethod() {
-        System.out.println("我是默认方法");
-        private1();
-        private2();
-        privateStatic1();
-        privateStatic2();
-        staticMethod();
-    }
-    static void staticMethod () {
-        System.out.println("我是静态方法");
-        privateStatic1();
-        privateStatic2();
-    }
-    private void private1 () {
-        System.out.println("私有方法1");
-    }
-    private void private2 () {
-        System.out.println("私有方法2");
-    }
-    private static void privateStatic1 () {
-        System.out.println("私有静态方法1");
-    }
-    private static void privateStatic2 () {
-        System.out.println("私有静态方法2");
-    }
+    // default void defaultMethod() {
+    //     System.out.println("我是默认方法");
+    //     // private1();
+    //     // private2();
+    //     privateStatic1();
+    //     privateStatic2();
+    //     staticMethod();
+    // }
+    // static void staticMethod () {
+    //     System.out.println("我是静态方法");
+    //     // privateStatic1();
+    //     // privateStatic2();
+    // }
+    // private void private1 () {
+    //     System.out.println("私有方法1");
+    // }
+    // private void private2 () {
+    //     System.out.println("私有方法2");
+    // }
+
+    // private static void privateStatic1 () {
+    //     System.out.println("私有静态方法1");
+    // }
+    // private static void privateStatic2 () {
+    //     System.out.println("私有静态方法2");
+    // }
 }

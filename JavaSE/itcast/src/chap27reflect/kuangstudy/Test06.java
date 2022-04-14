@@ -13,7 +13,7 @@ public class Test06 {
 
     private static void test3() {
         try {
-            Class<?> aClass = Class.forName("itcast.chap27reflect.kuangstudy.User");
+            Class<?> aClass = Class.forName("chap27reflect.kuangstudy.User");
             Constructor<?> constructor = aClass.getConstructor();
             Object o = constructor.newInstance();
             Method getId = aClass.getDeclaredMethod("getId");
@@ -28,7 +28,7 @@ public class Test06 {
 
     private static void test2() {
         try {
-            Class<?> aClass = Class.forName("itcast.chap27reflect.kuangstudy.User");
+            Class<?> aClass = Class.forName("chap27reflect.kuangstudy.User");
             Constructor<?> constructor = aClass.getConstructor();
             Object o = constructor.newInstance();
             Method getId = aClass.getDeclaredMethod("getId");

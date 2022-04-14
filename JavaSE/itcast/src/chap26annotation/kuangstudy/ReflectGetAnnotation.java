@@ -1,14 +1,12 @@
 package chap26annotation.kuangstudy;
 
-import lombok.Data;
-
 import java.lang.annotation.*;
 import java.lang.reflect.Field;
 
 public class ReflectGetAnnotation {
     public static void main(String[] args) {
         try {
-            Class<?> aClass = Class.forName("itcast.chap26annotation.kuangstudy.Person");
+            Class<?> aClass = Class.forName("chap26annotation.kuangstudy.Person");
             Table annotation = aClass.getAnnotation(Table.class);
             System.out.println("annotation.value() = " + annotation.value());
 
@@ -28,7 +26,6 @@ public class ReflectGetAnnotation {
 
 
 @Table("person")
-@Data
 class Person{
     @Param(column = "id", type = Integer.class, len = 10)
     Integer id;
@@ -36,6 +33,39 @@ class Person{
     Integer age;
     @Param(column = "name", type = String.class, len = 10)
     String name;
+
+    public Person(Integer id, Integer age, String name) {
+        this.id = id;
+        this.age = age;
+        this.name = name;
+    }
+
+    public Person() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
 
 @Target({ElementType.TYPE})

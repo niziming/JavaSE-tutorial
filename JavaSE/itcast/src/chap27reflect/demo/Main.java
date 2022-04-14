@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Class<?> aClass = Class.forName("itcast.chap27reflect.demo.HelloService");
+        Class<?> aClass = Class.forName("chap27reflect.demo.HelloService");
         Method[] methods = aClass.getMethods();
         for (Method method : methods) {
             String name = method.getName();

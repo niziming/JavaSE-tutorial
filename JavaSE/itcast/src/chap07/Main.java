@@ -1,6 +1,6 @@
 package chap07;
 
-import itcast.chap05.DefinitionArray;
+import chap05.DefinitionArray;
 
 import java.util.ArrayList;
 

@@ -9,6 +9,6 @@ public class AnimalTest {
         // animal.run(); // 【错误】无法继承方法,也无法调用
         LiveAble.run();
 
-        animal1.defaultMethod();
+        // animal1.defaultMethod();
     }
 }

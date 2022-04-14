@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 public class Test05 {
     public static void main(String[] args) {
         try {
-            Class aClass = Class.forName("itcast.chap27reflect.kuangstudy.User");
+            Class aClass = Class.forName("chap27reflect.kuangstudy.User");
             Object o = aClass.newInstance();
             System.out.println("o = " + o);
             Constructor declaredConstructor = aClass.getDeclaredConstructor(null);

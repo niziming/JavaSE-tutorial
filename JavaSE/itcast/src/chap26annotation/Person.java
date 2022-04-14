@@ -1,4 +1,4 @@
-// package itcast.chap26annotation;
+// package chap26annotation;
 //
 // public class Person {
 //     @Deprecated

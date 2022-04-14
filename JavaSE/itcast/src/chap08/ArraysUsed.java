@@ -1,6 +1,6 @@
 package chap08;
 
-import itcast.chap08.ClassName;
+import chap08.ClassName;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

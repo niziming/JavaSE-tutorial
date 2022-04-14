@@ -3,7 +3,7 @@ package chap27reflect.kuangstudy;
 public class Test01 {
     public static void main(String[] args) {
         A a = new A();
-        System.out.println("a.m = " + a.m);
+        System.out.println("a.m = " + A.m);
     }
 }
 

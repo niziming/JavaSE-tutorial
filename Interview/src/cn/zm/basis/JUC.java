@@ -10,15 +10,13 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneOffset;
 import java.time.temporal.ChronoField;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.*;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.stream.Collectors;
 
 public class JUC {
 
@@ -41,7 +39,6 @@ public class JUC {
         // 另外 value 是一个 volatile 变量，在内存中可见，
         // 因此 JVM 可以保证任何时刻任何线程总能拿到该变量的最新值。
         Unsafe.getUnsafe().compareAndSwapInt(new Object(), 0, 0, 1);
-
       }
       //endregion
 
@@ -133,15 +130,39 @@ public class JUC {
           System.out.println("全部处理完成");
         }
 
+        /**
+         * used 改进2
+         *
+         * 上面的代码还可以继续优化，当任务过多的时候，
+         * 把每一个 task 都列出来不太现实，可以考虑通过循环来添加任务。
+         */
+        public static void listCompletableFuture() {
+          List<String> paths = Arrays.asList("1", "2", "3", "4", "5", "6", "7");
+
+          List<CompletableFuture<Object>> collect = paths.stream().map(path -> CompletableFuture.supplyAsync(() -> {
+            System.out.println(path + "文件正在处理");
+            return null;
+          })).collect(Collectors.toList());
+
+          CompletableFuture<Void> allFutures = CompletableFuture.allOf(collect.toArray(new CompletableFuture[collect.size()]));
+
+          try {
+            allFutures.join();
+          } catch (Exception e) {
+            e.printStackTrace();
+          }
+
+          System.out.println("all down");
+        }
 
         public static void main(String[] args) throws InterruptedException {
-          completableFutureUsed();
+          listCompletableFuture();
+          // completableFutureUsed();
           // countDownLatchUsed();
+
         }
 
       }
-
-
       //endregion
 
       //endregion

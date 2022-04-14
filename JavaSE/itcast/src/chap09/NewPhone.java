@@ -1,7 +1,7 @@
 package chap09;
 
 
-import itcast.chap08.Phone;
+import chap08.Phone;
 
 public class NewPhone extends Phone {
     @Override
