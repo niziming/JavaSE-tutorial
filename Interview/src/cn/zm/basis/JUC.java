@@ -1,24 +1,54 @@
 package cn.zm.basis;
 
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
+import com.sun.corba.se.impl.legacy.connection.DefaultSocketFactory;
 import sun.misc.Unsafe;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadInfo;
 import java.lang.management.ThreadMXBean;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneOffset;
-import java.time.temporal.ChronoField;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.*;
-import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
 
 public class JUC {
+
+
+
+  //region monitor ThreadPool
+  public static class MonitorThreadPool {
+    public static void main(String[] args) {
+      ScheduledExecutorService service = new ScheduledThreadPoolExecutor(1, Executors.defaultThreadFactory());
+      ThreadPoolExecutor threadPool = ThreadPool.ThreadPoolExecutorExample.getThreadPool();
+      service.scheduleAtFixedRate(() -> {
+        System.out.println("=========================");
+        System.out.println("ThreadPool Size: [{}]" + threadPool.getPoolSize());
+        System.out.println("Active Threads: {}" + threadPool.getActiveCount());
+        System.out.println("Number of Tasks : {}" + threadPool.getCompletedTaskCount());
+        System.out.println("Number of Tasks in Queue: {}" + threadPool.getQueue().size());
+        System.out.println("=========================");
+      }, 0, 1, TimeUnit.SECONDS);
+      for (int i = 0; i < 10; i++) {
+        int index = i;
+        threadPool.execute(() -> {
+          try {
+            Thread.sleep(3000);
+          } catch (InterruptedException e) {
+            e.printStackTrace();
+          }
+          System.out.println("线程提交" + index);
+        });
+      }
+
+    }
+
+  }
+  //endregion
+
   //region AQS & CAS
   public static class AQSExample {
     //region cas
@@ -87,63 +117,65 @@ public class JUC {
 
       }
 
-        /**
-         * used 改进
-         * <p>
-         * 有没有可以改进的地方呢？
-         * 可以使用 CompletableFuture 类来改进！Java8 的 CompletableFuture
-         * 提供了很多对多线程友好的方法，使用它可以很方便地为我们编写多线程程序，
-         * 什么异步、串行、并行或者等待所有线程执行完任务什么的都非常方便。
-         */
-        public static void completableFutureUsed() {
-          CompletableFuture[] tasks = new CompletableFuture[THREAD_COUNT];
+      /**
+       * used 改进
+       * <p>
+       * 有没有可以改进的地方呢？
+       * 可以使用 CompletableFuture 类来改进！Java8 的 CompletableFuture
+       * 提供了很多对多线程友好的方法，使用它可以很方便地为我们编写多线程程序，
+       * 什么异步、串行、并行或者等待所有线程执行完任务什么的都非常方便。
+       */
+      public static void completableFutureUsed() {
+        CompletableFuture[] tasks = new CompletableFuture[THREAD_COUNT];
 
-          for (int i = 0; i < THREAD_COUNT; i++) {
-            final int THREAD_NUM = i;
-            CompletableFuture<String> task = CompletableFuture.supplyAsync(() ->
-              {
-                System.out.println("任务" + THREAD_NUM);
-                return "null";
-              }
-            );
-            tasks[i] = task;
-          }
-
-          CompletableFuture<Void> headerFuture = CompletableFuture.allOf(tasks);
-
-          try {
-            headerFuture.join();
-          } catch (Exception e) {
-            e.printStackTrace();
-          }
-
-          System.out.println("全部处理完成");
+        for (int i = 0; i < THREAD_COUNT; i++) {
+          final int THREAD_NUM = i;
+          CompletableFuture<String> task = CompletableFuture.supplyAsync(() ->
+            {
+              System.out.println("任务" + THREAD_NUM);
+              return "null";
+            }
+          );
+          tasks[i] = task;
         }
 
+        CompletableFuture<Void> headerFuture = CompletableFuture.allOf(tasks);
 
-        /**
-         * completableFutureUsed
-         * <p>
-         * 有没有可以改进的地方呢？
-         * 可以使用 CompletableFuture 类来改进！Java8 的 CompletableFuture
-         * 提供了很多对多线程友好的方法，使用它可以很方便地为我们编写多线程程序，
-         * 什么异步、串行、并行或者等待所有线程执行完任务什么的都非常方便。
-         */
-        public static void completableFutureUsed1() {
-          CompletableFuture<Integer> task = CompletableFuture.supplyAsync(() -> 1);
-          task.thenApplyAsync(re -> {
-            System.out.println(re);
-            return re + 1;
-          });
-
-
+        try {
+          headerFuture.join();
+        } catch (Exception e) {
+          e.printStackTrace();
         }
 
+        System.out.println("全部处理完成");
+      }
+
+
+      /**
+       * completableFutureUsed
+       * <p>
+       * 有没有可以改进的地方呢？
+       * 可以使用 CompletableFuture 类来改进！Java8 的 CompletableFuture
+       * 提供了很多对多线程友好的方法，使用它可以很方便地为我们编写多线程程序，
+       * 什么异步、串行、并行或者等待所有线程执行完任务什么的都非常方便。
+       */
+      public static void completableFutureUsed1() {
+        CompletableFuture<Integer> task = CompletableFuture.supplyAsync(() -> 1);
+        task.thenApplyAsync(re -> {
+          System.out.println(re);
+          return re + 1;
+        }).thenApplyAsync(re -> {
+          System.out.println(re);
+          return re + 1;
+        });
+
+
+      }
 
 
       /**
        * used 改进2
-       *
+       * <p>
        * 上面的代码还可以继续优化，当任务过多的时候，
        * 把每一个 task 都列出来不太现实，可以考虑通过循环来添加任务。
        */
@@ -172,6 +204,59 @@ public class JUC {
         completableFutureUsed1();
         // countDownLatchUsed();
 
+      }
+
+    }
+    //endregion
+
+    // region Semaphore
+    // * Semaphore(信号量)-允许多个线程同时访问：
+    // synchronized 和 ReentrantLock 都是一次只允许一个线程访问某个资源，
+    // Semaphore(信号量)可以指定多个线程同时访问某个资源。
+    public static class SemaphoreExample {
+      // 请求数量
+      private static final int THREAD_COUNT = 550;
+
+      private Lock lock = new ReentrantLock();
+
+
+
+      public static void main(String[] args) {
+        // 获取线程池创建一个固定数量的线程池
+        ExecutorService pool = Executors.newFixedThreadPool(300);
+
+        // 一次允许执行的线程池数量
+        final Semaphore semaphore = new Semaphore(20); // 非公平
+        // final Semaphore semaphore = new Semaphore(20, true); // 公平
+        SemaphoreExample semaphoreExample = new SemaphoreExample();
+        for (int i = 0; i < THREAD_COUNT; i++) {
+          final int THREAD_NUM = i;
+          pool.execute(() -> {
+            try {
+              semaphore.acquire(5); // 获取一个许可 所以可运行线程数量为20/5=4;
+              // SemaphoreExample.class.wait(2000);
+              semaphoreExample.test(THREAD_NUM);
+              semaphore.release(5); // 释放
+            } catch (InterruptedException e) {
+              e.printStackTrace();
+            }
+          });
+        }
+        pool.shutdown();
+        System.out.println("finish");
+      }
+
+      private void test(int thread_num) throws InterruptedException {
+        // lock.lock();
+        try {
+          Thread.sleep(2000);
+          System.out.println("thread_num = " + thread_num);
+          Thread.sleep(2000);
+        } catch (Exception e) {
+          e.printStackTrace();
+        } finally {
+          // lock.unlock();
+        }
       }
 
     }
@@ -341,7 +426,6 @@ public class JUC {
         // 所有线程在当前任务执行完毕后，将返回线程池进行复用。
         ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
       }
-
     }
     //endregion
 
@@ -361,6 +445,8 @@ public class JUC {
 
       private volatile static ThreadPoolExecutor threadPoolExecutor = null;
 
+      private static String threadNamePrefix = "线程名";
+
       //region getThreadPool
       public static ThreadPoolExecutor getThreadPool() {
         if (threadPoolExecutor == null) {
@@ -371,7 +457,10 @@ public class JUC {
               KEEP_ALIVE_TIME,
               TimeUnit.SECONDS,
               new ArrayBlockingQueue<>(QUEUE_CAPACITY),
-              new ThreadPoolExecutor.CallerRunsPolicy()
+              // new ThreadPoolExecutor.CallerRunsPolicy(),
+              new ThreadFactoryBuilder()
+                .setNameFormat(threadNamePrefix + "-%d")
+                .setDaemon(true).build()
             );
           }
         }
@@ -720,6 +809,53 @@ public class JUC {
 
     }
 
+  }
+  //endregion
+
+  //region LockTest 待完善
+  public static class LockDemo1 {
+    // volatile可见性，变量变更始终从主存中获取最新值，而不存在延迟。
+    volatile Boolean keepRunning = true;
+    Lock lock = new ReentrantLock(false);
+
+    /**
+     * instans lock
+     */
+    public void instansLock() {
+      try {
+        lock.lock();
+        System.out.println(Thread.currentThread().getName() + ("成功获取锁"));
+        while (keepRunning) {
+          Thread.sleep(2000);
+          System.out.println(Thread.currentThread().getName() + "used assets");
+        }
+      } catch (Exception e) {
+        e.printStackTrace();
+      } finally {
+        lock.unlock();
+        System.out.println(Thread.currentThread().getName() + "-释放锁-结束");
+      }
+    }
+
+    public Lock getLock() {
+      return lock;
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+      LockDemo1 lockDemo = new LockDemo1();
+      // Lock lock = lockDemo.getLock();
+      Thread thread = new Thread(() -> lockDemo.instansLock(), "线程1");
+      // Thread thread1 = new Thread(() -> lockDemo.notify());
+      thread.start();
+      // lock.wait(1000);
+
+      new Thread(() -> {
+        lockDemo.instansLock();
+      }, "线程2").start();
+
+      // Thread.sleep(1000);
+      // thread1.start();
+    }
   }
   //endregion
 
