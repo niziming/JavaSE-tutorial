@@ -17,8 +17,6 @@ import java.util.stream.Collectors;
 
 public class JUC {
 
-
-
   //region monitor ThreadPool
   public static class MonitorThreadPool {
     public static void main(String[] args) {
@@ -74,7 +72,8 @@ public class JUC {
      * CountDownLatch （倒计时器）： CountDownLatch 是一个同步工具类，用来协调多个线程之间的同步。这个工具通常用来控制线程等待，它可以让某一个线程等待直到倒计时结束，再开始执行。
      * CyclicBarrier(循环栅栏)： CyclicBarrier 和 CountDownLatch 非常类似，它也可以实现线程间的技术等待，但是它的功能比 CountDownLatch 更加复杂和强大。主要应用场景和 CountDownLatch 类似。CyclicBarrier 的字面意思是可循环使用（Cyclic）的屏障（Barrier）。它要做的事情是，让一组线程到达一个屏障（也可以叫同步点）时被阻塞，直到最后一个线程到达屏障时，屏障才会开门，所有被屏障拦截的线程才会继续干活。CyclicBarrier 默认的构造方法是 CyclicBarrier(int parties)，其参数表示屏障拦截的线程数量，每个线程调用 await() 方法告诉 CyclicBarrier 我已经到达了屏障，然后当前线程被阻塞。
      */
-    //region CountDownLatch
+
+    //region CountDownLatch(倒计时器)
     //  用过 CountDownLatch 么？什么场景下用的？
     // CountDownLatch 的作用就是 允许 count 个线程阻塞在一个地方，直至所有线程的任务都执行完毕。之前在项目中，有一个使用多线程读取多个文件处理的场景，我用到了 CountDownLatch 。具体场景是下面这样的：
     //
@@ -209,7 +208,7 @@ public class JUC {
     }
     //endregion
 
-    // region Semaphore
+    // region Semaphore(信号量)
     // * Semaphore(信号量)-允许多个线程同时访问：
     // synchronized 和 ReentrantLock 都是一次只允许一个线程访问某个资源，
     // Semaphore(信号量)可以指定多个线程同时访问某个资源。
@@ -259,6 +258,81 @@ public class JUC {
         }
       }
 
+    }
+    //endregion
+
+    //region CyclicBarrier(循环栅栏)
+    // CyclicBarrier 和 CountDownLatch 非常类似，它也可以实现线程间的技术等待，但是它的功能比 CountDownLatch 更加复杂和强大。主要应用场景和 CountDownLatch 类似。
+    // CountDownLatch 的实现是基于 AQS 的，而 CycliBarrier 是基于 ReentrantLock(ReentrantLock 也属于 AQS 同步器)和 Condition 的。
+    public static class CyclicBarrierExample {
+      // 请求数
+      private static final int THREAD_COUNT = 20;
+
+      // 需要同步现场的数量
+      public static final CyclicBarrier cyclicBarrier = new CyclicBarrier(5);
+
+      // 优先执行 barrierAction
+      public static final CyclicBarrier cyclicBarrier1 = new CyclicBarrier(5, () -> {System.out.println("------当线程数达到之后，优先执行------");});
+
+      public static void main(String[] args) throws InterruptedException, BrokenBarrierException, TimeoutException {
+        test1();
+        // test();
+      }
+
+      /**
+       * CyclicBarrier 还提供一个更高级的构造函数
+       * CyclicBarrier(int parties, Runnable barrierAction)，用于在线程到达屏障时，
+       * 优先执行 barrierAction，方便处理更复杂的业务场景。
+       */
+      private static void test1() {
+        ExecutorService threadPool = Executors.newFixedThreadPool(10);
+        for (int i = 0; i < THREAD_COUNT; i++) {
+          int THREAD_NUM = i;
+          threadPool.execute(() -> {
+            try {
+              System.out.println("THREAD_NUM = " + THREAD_NUM + "is ready");
+              cyclicBarrier1.await();
+              System.out.println("THREAD_NUM = " + THREAD_NUM + "is finish");
+            } catch (InterruptedException e) {
+              e.printStackTrace();
+            } catch (BrokenBarrierException e) {
+              e.printStackTrace();
+            }
+          });
+        }
+        threadPool.shutdown();
+      }
+
+      /**
+       * CyclicBarrier 可以用于多线程计算数据，最后合并计算结果的应用场景。
+       * @throws InterruptedException
+       * @throws BrokenBarrierException
+       */
+      private static void test() throws InterruptedException, BrokenBarrierException {
+        ExecutorService threadPool = Executors.newFixedThreadPool(10);
+
+        for (int i = 0; i < THREAD_COUNT; i++) {
+          final int THREAD_NUM = i;
+          Thread.sleep(1000);
+          threadPool.execute(() -> {
+          System.out.println("thread_num = " + THREAD_NUM + "is ready");
+          // 等待60秒, 保证子线程完全执行结束
+            try {
+              cyclicBarrier.await(60, TimeUnit.SECONDS);
+            } catch (InterruptedException e) {
+              e.printStackTrace();
+            } catch (BrokenBarrierException e) {
+              e.printStackTrace();
+            } catch (TimeoutException e) {
+              e.printStackTrace();
+            }
+            System.out.println("thread_num = " + THREAD_NUM + "is finish");
+          });
+        }
+
+        threadPool.shutdown();
+
+      }
     }
     //endregion
 
