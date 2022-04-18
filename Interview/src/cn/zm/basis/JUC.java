@@ -2,6 +2,7 @@ package cn.zm.basis;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.sun.corba.se.impl.legacy.connection.DefaultSocketFactory;
+import com.sun.org.apache.bcel.internal.generic.FADD;
 import sun.misc.Unsafe;
 
 import java.lang.management.ManagementFactory;
@@ -16,7 +17,6 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
 
 public class JUC {
-
   //region monitor ThreadPool
   public static class MonitorThreadPool {
     public static void main(String[] args) {
@@ -219,7 +219,6 @@ public class JUC {
       private Lock lock = new ReentrantLock();
 
 
-
       public static void main(String[] args) {
         // 获取线程池创建一个固定数量的线程池
         ExecutorService pool = Executors.newFixedThreadPool(300);
@@ -272,7 +271,9 @@ public class JUC {
       public static final CyclicBarrier cyclicBarrier = new CyclicBarrier(5);
 
       // 优先执行 barrierAction
-      public static final CyclicBarrier cyclicBarrier1 = new CyclicBarrier(5, () -> {System.out.println("------当线程数达到之后，优先执行------");});
+      public static final CyclicBarrier cyclicBarrier1 = new CyclicBarrier(5, () -> {
+        System.out.println("------当线程数达到之后，优先执行------");
+      });
 
       public static void main(String[] args) throws InterruptedException, BrokenBarrierException, TimeoutException {
         test1();
@@ -305,6 +306,7 @@ public class JUC {
 
       /**
        * CyclicBarrier 可以用于多线程计算数据，最后合并计算结果的应用场景。
+       *
        * @throws InterruptedException
        * @throws BrokenBarrierException
        */
@@ -315,8 +317,8 @@ public class JUC {
           final int THREAD_NUM = i;
           Thread.sleep(1000);
           threadPool.execute(() -> {
-          System.out.println("thread_num = " + THREAD_NUM + "is ready");
-          // 等待60秒, 保证子线程完全执行结束
+            System.out.println("thread_num = " + THREAD_NUM + "is ready");
+            // 等待60秒, 保证子线程完全执行结束
             try {
               cyclicBarrier.await(60, TimeUnit.SECONDS);
             } catch (InterruptedException e) {
@@ -631,38 +633,6 @@ public class JUC {
   }
   //endregion
 
-  //region 锁ReentrantLock
-  public static class LockDemo {
-    private volatile int num = 50;
-    Lock lock = new ReentrantLock(false);
-
-    public void sale() {
-      lock.lock();
-      try {
-        if (num > 0) {
-          System.out.println(Thread.currentThread().getName() + " 卖出第 " + (num--) + "张票,剩余" + num);
-        }
-      } catch (Exception e) {
-        e.printStackTrace();
-      } finally {
-        lock.unlock();
-      }
-    }
-
-    public static void main(String[] args) {
-      LockDemo lockDemo = new LockDemo();
-      for (int i = 0; i < 3; i++) {
-        new Thread(() -> {
-          for (int j = 0; j < 50; j++) {
-            lockDemo.sale();
-          }
-        }, "柜台" + i).start();
-      }
-    }
-
-  }
-  //endregion
-
   //region volatile特性验证
   public static class Atomicity {
     volatile int num = 0;
@@ -741,6 +711,38 @@ public class JUC {
   }
   //endregion
 
+  //region ReentrantLock锁
+  public static class LockDemo {
+    private volatile int num = 50;
+    Lock lock = new ReentrantLock(false);
+
+    public void sale() {
+      lock.lock();
+      try {
+        if (num > 0) {
+          System.out.println(Thread.currentThread().getName() + " 卖出第 " + (num--) + "张票,剩余" + num);
+        }
+      } catch (Exception e) {
+        e.printStackTrace();
+      } finally {
+        lock.unlock();
+      }
+    }
+
+    public static void main(String[] args) {
+      LockDemo lockDemo = new LockDemo();
+      for (int i = 0; i < 3; i++) {
+        new Thread(() -> {
+          for (int j = 0; j < 50; j++) {
+            lockDemo.sale();
+          }
+        }, "柜台" + i).start();
+      }
+    }
+
+  }
+  //endregion
+
   //region Synchronized关键字
   static class Synchronized {
     static int i = 0;
@@ -791,6 +793,74 @@ public class JUC {
       //   new Thread(() -> method(), "线程2").start();
       // }
     }
+
+  }
+  //endregion
+
+  //region ReentrantLock 和 Synchronized 比较
+  public static class ReentrantLockVSSynchronized {
+    //region Synchronized
+
+    /**
+     * Synchronized
+     */
+    public synchronized void sync() {
+
+    }
+
+    public void synchronizedExample() {
+      synchronized (this) {
+      }
+      synchronized (new Object()) {
+      }
+      for (int i = 0; i < 10; i++) {
+        synchronized (this) {
+          System.out.println(Thread.currentThread().getName() + "可重入");
+        }
+      }
+    }
+
+    /**
+     * classLock
+     */
+    public static void classLock() {
+      synchronized (ReentrantLockVSSynchronized.class) {
+      }
+    }
+    //endregion
+
+    public static void main(String[] args) {
+      // new ReentrantLockVSSynchronized().synchronizedExample();
+
+      for (int i = 0; i < 10; i++) {
+        reentrantLockExample();
+      }
+    }
+
+    //region ReentrantLock
+
+    /**
+     * ReentrantLock
+     */
+    public static void reentrantLockExample() {
+      // 1.初始化选择公平锁、非公平锁
+      ReentrantLock lock = new ReentrantLock(true);
+      // 2.可用于代码块
+      lock.lock();
+      try {
+        // 3.支持多种加锁方式，比较灵活; 具有可重入特性
+        if (lock.tryLock(2000, TimeUnit.MILLISECONDS)) {
+          System.out.println(Thread.currentThread().getName()+"-reentrant");
+        }
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      } finally {
+        lock.unlock();
+      }
+
+
+    }
+    //endregion
 
   }
   //endregion
