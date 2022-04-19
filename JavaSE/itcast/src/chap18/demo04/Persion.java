@@ -40,21 +40,30 @@ public class Persion {
     }
 
     public static void main(String[] args) {
-        // 传统写法
-        Persion[] array = {new Persion("z", 20), new Persion("m", 18), new Persion("h", 21)};
-
-        Comparator<Persion> comparator = new Comparator<>() {
-            @Override
-            public int compare(Persion o1, Persion o2) {
-                return o1.age - o2.age;
+        for (;;) {
+            try {
+                Thread.sleep(1111);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        };
+            System.out.println(" = ");
+        }
 
-        Arrays.sort(array, comparator);
-        System.out.println(Arrays.toString(array));
-
-        // lambda
-        Arrays.sort(array, (o1, o2) -> o2.age - o1.age);
-        System.out.println(Arrays.toString(array));
+        // // 传统写法
+        // Persion[] array = {new Persion("z", 20), new Persion("m", 18), new Persion("h", 21)};
+        //
+        // Comparator<Persion> comparator = new Comparator<>() {
+        //     @Override
+        //     public int compare(Persion o1, Persion o2) {
+        //         return o1.age - o2.age;
+        //     }
+        // };
+        //
+        // Arrays.sort(array, comparator);
+        // System.out.println(Arrays.toString(array));
+        //
+        // // lambda
+        // Arrays.sort(array, (o1, o2) -> o2.age - o1.age);
+        // System.out.println(Arrays.toString(array));
     }
 }

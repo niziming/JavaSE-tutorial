@@ -12,11 +12,77 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.*;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
 
 public class JUC {
+  //region 自定义同步工具
+  //了解 AQS 基本原理以后，按照上面所说的 AQS 知识点，自己实现一个同步工具。
+  public static class NeeLock {
+    private Sync sync = new Sync();
+
+    private static class Sync extends AbstractQueuedSynchronizer {
+
+      @Override
+      protected boolean tryAcquire(int arg) {
+        return compareAndSetState(0, 1);
+      }
+
+      @Override
+      protected boolean tryRelease(int arg) {
+        setState(0);
+        return true;
+      }
+
+      @Override
+      protected boolean isHeldExclusively() {
+        return getState() == 1;
+      }
+    }
+    public void lock () {
+      sync.acquire(1);
+    }
+
+    public void unlock () {
+      sync.release(1);
+    }
+
+    static int count = 0;
+    static NeeLock lock = new NeeLock();
+    public static void main(String[] args) throws InterruptedException {
+      Thread thread = new Thread(() -> {
+        try {
+          lock.lock();
+          for (int i = 0; i < 111; i++) {
+            count++;
+          }
+        } finally {
+          lock.unlock();
+        }
+      }, "thread1");
+      Thread thread2 = new Thread(() -> {
+        try {
+          lock.lock();
+          for (int i = 0; i < 111; i++) {
+            count++;
+          }
+        } finally {
+          lock.unlock();
+        }
+      }, "thread2");
+      System.out.println("start = ");
+      thread.start();
+      thread2.start();
+      thread.join();
+      thread2.join();
+      System.out.println("count = " + count);
+    }
+
+  }
+  //endregion
+
   //region monitor ThreadPool
   public static class MonitorThreadPool {
     public static void main(String[] args) {
@@ -464,6 +530,102 @@ public class JUC {
     }
     //endregion
 
+    //region AtomicReference 类使用实例
+    public static class AtomicReferenceExample {
+      public static void main(String[] args) {
+        AtomicReference<Person> ar = new AtomicReference<>();
+        Person p1 = new AtomicReferenceExample().new Person("Sna", 22);
+        ar.set(p1);
+        Person p2 = new AtomicReferenceExample().new Person("Aea", 22);
+        ar.set(p2);
+
+        System.out.println(ar.get());
+
+
+
+      }
+      class Person {
+        private String name;
+        private int age;
+
+        public String getName() {
+          return name;
+        }
+
+        public void setName(String name) {
+          this.name = name;
+        }
+
+        public int getAge() {
+          return age;
+        }
+
+        public void setAge(int age) {
+          this.age = age;
+        }
+
+        public Person() {
+        }
+
+        public Person(String name, int age) {
+          this.name = name;
+          this.age = age;
+        }
+
+        @Override
+        public String toString() {
+          return "Person{" +
+            "name='" + name + '\'' +
+            ", age=" + age +
+            '}';
+        }
+      }
+
+    }
+    //endregion
+
+    //region AtomicStampedReference 类使用示例
+    public static class AtomicStampedReferenceExample {
+
+      public void example() {
+        final Integer initialRef = 0, initialStamp = 0;
+        final AtomicStampedReference<Integer> asr = new AtomicStampedReference<>(initialRef, initialStamp);
+        System.out.println("currentValue=" + asr.getReference() + ", currentStamp=" + asr.getStamp());
+
+        // compare and set
+        final Integer newReference = 666, newStamp = 999;
+        final boolean casResult = asr.compareAndSet(initialRef, newReference, initialStamp, newStamp);
+        System.out.println("currentValue=" + asr.getReference()
+          + ", currentStamp=" + asr.getStamp()
+          + ", casResult=" + casResult);
+
+        // 获取当前的值和当前的 stamp 值
+        int[] arr = new int[1];
+        final Integer currentValue = asr.get(arr);
+        final int currentStamp = arr[0];
+        System.out.println("currentValue=" + currentValue + ", currentStamp=" + currentStamp);
+
+        // 重新设置当前值和 stamp 值
+        asr.set(initialRef, initialStamp);
+        System.out.println("currentValue=" + asr.getReference() + ", currentStamp=" + asr.getStamp());
+
+        // [不推荐使用，除非搞清楚注释的意思了] weak compare and set
+        // 困惑！weakCompareAndSet 这个方法最终还是调用 compareAndSet 方法。[版本: jdk-8u191]
+        // 但是注释上写着 "May fail spuriously and does not provide ordering guarantees,
+        // so is only rarely an appropriate alternative to compareAndSet."
+        // todo 感觉有可能是 jvm 通过方法名在 native 方法里面做了转发
+        final boolean wCasResult = asr.weakCompareAndSet(initialRef, newReference, initialStamp, newStamp);
+        System.out.println("currentValue=" + asr.getReference()
+          + ", currentStamp=" + asr.getStamp()
+          + ", wCasResult=" + wCasResult);
+
+      }
+      public static void main(String[] args) {
+        new AtomicStampedReferenceExample().example();
+      }
+
+    }
+    //endregion
   }
   //endregion
 
