@@ -1,4 +1,4 @@
-package cn.zm.basis;
+package cn.zm;
 
 import java.math.BigDecimal;
 

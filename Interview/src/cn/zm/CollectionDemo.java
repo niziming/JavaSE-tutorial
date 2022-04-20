@@ -1,4 +1,4 @@
-package cn.zm.basis;
+package cn.zm;
 
 import com.sun.jmx.remote.internal.ArrayQueue;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
 
 /**
  * 集合

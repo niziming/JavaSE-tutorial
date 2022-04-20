@@ -1,4 +1,4 @@
-package cn.zm.basis;
+package cn.zm;
 
 
 import net.sf.cglib.proxy.Enhancer;
@@ -55,14 +55,14 @@ public class Reflection {
       try {
         // 内部类无法获取
         // Class<?> aClass1 = Class.forName("cn.zm.basis.Reflection.ClassCreate");
-        Class<?> aClass1 = Class.forName("cn.zm.basis.Reflection");
+        Class<?> aClass1 = Class.forName("cn.zm.Reflection");
         System.out.println(aClass1);
       } catch (ClassNotFoundException e) {
         e.printStackTrace();
       }
 
       try {
-        final Class<?> aClass1 = ClassLoader.getSystemClassLoader().loadClass("cn.zm.basis.Reflection");
+        final Class<?> aClass1 = ClassLoader.getSystemClassLoader().loadClass("cn.zm.Reflection");
         System.out.println(aClass1);
       } catch (ClassNotFoundException e) {
         e.printStackTrace();

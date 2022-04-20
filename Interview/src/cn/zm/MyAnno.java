@@ -1,4 +1,4 @@
-package cn.zm.basis;
+package cn.zm;
 
 public @interface MyAnno {
 }

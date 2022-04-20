@@ -1,4 +1,4 @@
-package cn.zm.basis;
+package cn.zm;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

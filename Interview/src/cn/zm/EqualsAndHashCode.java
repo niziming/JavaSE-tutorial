@@ -1,4 +1,4 @@
-package cn.zm.basis;
+package cn.zm;
 
 public class EqualsAndHashCode {
   public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package cn.zm.basis;
+package cn.zm;
 
 /**
  * 深浅拷贝示例

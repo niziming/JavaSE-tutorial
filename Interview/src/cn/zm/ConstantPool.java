@@ -1,4 +1,4 @@
-package cn.zm.basis;
+package cn.zm;
 
 public class ConstantPool {
   public static void main(String[] args) {
