@@ -10,6 +10,9 @@
 
     <modules>
         <module>Interview</module>
+        <module>JavaSE</module>
+        <module>JavaMainPoint</module>
+        <module>DataStructureAlgorithm</module>
     </modules>
 
     <dependencies>
