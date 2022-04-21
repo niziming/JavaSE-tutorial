@@ -47,7 +47,7 @@ public class AQS_or_CAS_Example {
   public static class CountDownLatchExample {
     static final int THREAD_COUNT = 6;
     // 前面使用的线程池
-    static ThreadPoolExecutor threadPool = ThreadPool.ThreadPoolExecutorExample.getThreadPool();
+    static ThreadPoolExecutor threadPool = ThreadPool.getThreadPool();
 
     /**
      * Used

@@ -44,55 +44,52 @@ public class ThreadPool {
   //endregion
 
   //region ThreadPoolExecutor
-  public static class ThreadPoolExecutorExample {
-    // corePoolSize : 核心线程数定义了最小可以同时运行的线程数量。
-    private static final int CORE_POOL_SIZE = 5;
-    // maximumPoolSize : 当队列中存放的任务达到队列容量的时候，
-    // 当前可以同时运行的线程数量变为最大线程数。
-    private static final int MAX_POOL_SIZE = 10;
-    // workQueue: 当新任务来的时候会先判断当前运行的线程数量是否达到核心线程数，
-    // 如果达到的话，新任务就会被存放在队列中。
-    private static final int QUEUE_CAPACITY = 100;
-    // 当线程池中的线程数量大于 corePoolSize 的时候，如果这时没有新的任务提交，
-    // 核心线程外的线程不会立即销毁，而是会等待，直到等待的时间超过了 keepAliveTime才会被回收销毁；
-    private static final Long KEEP_ALIVE_TIME = 1L;
+  // corePoolSize : 核心线程数定义了最小可以同时运行的线程数量。
+  private static final int CORE_POOL_SIZE = 5;
+  // maximumPoolSize : 当队列中存放的任务达到队列容量的时候，
+  // 当前可以同时运行的线程数量变为最大线程数。
+  private static final int MAX_POOL_SIZE = 10;
+  // workQueue: 当新任务来的时候会先判断当前运行的线程数量是否达到核心线程数，
+  // 如果达到的话，新任务就会被存放在队列中。
+  private static final int QUEUE_CAPACITY = 100;
+  // 当线程池中的线程数量大于 corePoolSize 的时候，如果这时没有新的任务提交，
+  // 核心线程外的线程不会立即销毁，而是会等待，直到等待的时间超过了 keepAliveTime才会被回收销毁；
+  private static final Long KEEP_ALIVE_TIME = 1L;
 
-    private volatile static ThreadPoolExecutor threadPoolExecutor = null;
+  private volatile static ThreadPoolExecutor threadPoolExecutor = null;
 
-    private static String threadNamePrefix = "线程名";
+  private static String threadNamePrefix = "线程名";
 
-    //region getThreadPool
-    public static ThreadPoolExecutor getThreadPool() {
-      if (threadPoolExecutor == null) {
-        synchronized (ThreadPoolExecutorExample.class) {
-          threadPoolExecutor = new ThreadPoolExecutor(
-            CORE_POOL_SIZE,
-            MAX_POOL_SIZE,
-            KEEP_ALIVE_TIME,
-            TimeUnit.SECONDS,
-            new ArrayBlockingQueue<>(QUEUE_CAPACITY),
-            // new ThreadPoolExecutor.CallerRunsPolicy(),
-            new ThreadFactoryBuilder()
-              .setNameFormat(threadNamePrefix + "-%d")
-              .setDaemon(true).build()
-          );
-        }
+  //region getThreadPool
+  public static ThreadPoolExecutor getThreadPool() {
+    if (threadPoolExecutor == null) {
+      synchronized (ThreadPool.class) {
+        threadPoolExecutor = new ThreadPoolExecutor(
+          CORE_POOL_SIZE,
+          MAX_POOL_SIZE,
+          KEEP_ALIVE_TIME,
+          TimeUnit.SECONDS,
+          new ArrayBlockingQueue<>(QUEUE_CAPACITY),
+          // new ThreadPoolExecutor.CallerRunsPolicy(),
+          new ThreadFactoryBuilder()
+            .setNameFormat(threadNamePrefix + "-%d")
+            .setDaemon(true).build()
+        );
       }
-      return threadPoolExecutor;
     }
-    //endregion
+    return threadPoolExecutor;
+  }
 
-    public static void main(String[] args) {
-      ThreadPoolExecutor threadPool = ThreadPoolExecutorExample.getThreadPool();
-      for (int i = 0; i < 10; i++) {
-        threadPool.execute(new Task("" + i));
-      }
-
-      threadPool.shutdown();
-      while (!threadPool.isTerminated()) {
-      }
-      System.out.println("结束");
+  public static void main(String[] args) {
+    ThreadPoolExecutor threadPool = ThreadPool.getThreadPool();
+    for (int i = 0; i < 10; i++) {
+      threadPool.execute(new Task("" + i));
     }
+
+    threadPool.shutdown();
+    while (!threadPool.isTerminated()) {
+    }
+    System.out.println("结束");
   }
 
   public static class Task implements Runnable {
@@ -125,7 +122,6 @@ public class ThreadPool {
     }
 
   }
-  //endregion
-
+//endregion
 }
 // endregion

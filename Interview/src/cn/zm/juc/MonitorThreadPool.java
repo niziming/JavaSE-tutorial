@@ -6,7 +6,7 @@ import java.util.concurrent.*;
 public class MonitorThreadPool {
   public static void main(String[] args) {
     ScheduledExecutorService service = new ScheduledThreadPoolExecutor(1, Executors.defaultThreadFactory());
-    ThreadPoolExecutor threadPool = ThreadPool.ThreadPoolExecutorExample.getThreadPool();
+    ThreadPoolExecutor threadPool = ThreadPool.getThreadPool();
     service.scheduleAtFixedRate(() -> {
       System.out.println("=========================");
       System.out.println("ThreadPool Size: [{}]" + threadPool.getPoolSize());
