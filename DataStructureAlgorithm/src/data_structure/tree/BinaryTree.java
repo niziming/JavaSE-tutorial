@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * 二叉树
- * @author DELL
+ * @author 十渊
  */
 @Data
 public class BinaryTree {
