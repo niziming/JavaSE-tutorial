@@ -5,11 +5,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * 二叉树
+ * BinaryTree
  * @author 十渊
  */
 @Data
-public class BinaryTree {
+public class LinkedBinaryTree {
+
   // 根节点
   private Node root;
   // 深度
@@ -69,13 +70,13 @@ public class BinaryTree {
     return root;
   }
 
-  public BinaryTree(Node root) {
+  public LinkedBinaryTree(Node root) {
     this.root = root;
     this.root.data = 0;
     this.deep = 0;
   }
 
-  public BinaryTree() {
+  public LinkedBinaryTree() {
     this.deep = 0;
     this.root = new Node();
     this.root.data = 0;
@@ -96,9 +97,9 @@ public class BinaryTree {
   }
 
   public static void main(String[] args) {
-    BinaryTree binaryTree = new BinaryTree();
-    Node node =  new BinaryTree().new Node(1);
-    binaryTree.insert(node);
-    System.out.println("binaryTree = " + binaryTree);
+    LinkedBinaryTree linkedBinaryTree = new LinkedBinaryTree();
+    Node node =  new LinkedBinaryTree().new Node(1);
+    linkedBinaryTree.insert(node);
+    System.out.println("binaryTree = " + linkedBinaryTree);
   }
 }
