@@ -58,7 +58,7 @@ public class LinkedBinaryTree {
 
 
   public void frontTraverse() {
-    Assert.notNull(this.root, "The root required not null");
+    Assert.notNull(this.root, "The root node required non null");
 
   }
 
@@ -96,10 +96,57 @@ public class LinkedBinaryTree {
     }
   }
 
+  // 先序遍历
+  public void preOrder (Node root) {
+    if (root == null) return;
+    System.out.println("root.data = " + root.data);
+    preOrder(root.left);
+    preOrder(root.right);
+  }
+
+  // 中序遍历
+  public void inOrder (Node root) {
+    if (root == null) return;
+    inOrder(root.left);
+    System.out.println("root.data = " + root.data);
+    inOrder(root.right);
+  }
+
+  // 中序遍历
+  public void postOrder (Node root) {
+    if (root == null) return;
+    postOrder(root.left);
+    postOrder(root.right);
+    System.out.println("root.data = " + root.data);
+  }
+
   public static void main(String[] args) {
+
+
     LinkedBinaryTree linkedBinaryTree = new LinkedBinaryTree();
+
     Node node =  new LinkedBinaryTree().new Node(1);
     linkedBinaryTree.insert(node);
     System.out.println("binaryTree = " + linkedBinaryTree);
+
+    Node node1 =  new LinkedBinaryTree().new Node(2);
+    linkedBinaryTree.insert(node1);
+    System.out.println("binaryTree = " + linkedBinaryTree);
+
+    Node node2 =  new LinkedBinaryTree().new Node(3);
+    linkedBinaryTree.insert(node2);
+    System.out.println("binaryTree = " + linkedBinaryTree);
+
+    // 先序遍历
+    linkedBinaryTree.preOrder(node1);
+
+    System.out.println("中序遍历");
+    // 中序遍历
+    linkedBinaryTree.inOrder(node1);
+
+    System.out.println("后续遍历");
+    // 后续
+    linkedBinaryTree.postOrder(node1);
+
   }
 }
