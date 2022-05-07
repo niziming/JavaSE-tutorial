@@ -95,6 +95,6 @@ public class LambdaInterfaceExample {
     predicate();
     // function();
     // consumer();
-    // supplier(() -> "aaa");
+    supplier(() -> "aaa");
   }
 }
