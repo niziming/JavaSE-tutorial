@@ -1,5 +1,6 @@
 package data_structure.tree;
 
+import cn.hutool.core.lang.Assert;
 import lombok.Data;
 
 /**
@@ -9,25 +10,31 @@ import lombok.Data;
 @Data
 public class ArrayBinaryTree {
   private Object[] tree = new Object[10];
-  Integer index = 1;
+  Integer deep = 1;
 
   public void insert (Object data){
 
-    Object root = tree[index];
+    Object root = tree[deep];
     if (root == null) {
-      tree[index] = data;
+      tree[deep] = data;
       return;
     }
 
     while (true) {
-      if (tree[index*2] == null) {
-        tree[index*2] = data;
-        return;
-      } else if (tree[index*2+1] == null){
-        tree[index*2+1] = data;
+      int leftLeaf = deep * 2;
+      Assert.isTrue(leftLeaf <= tree.length-1, "越界了-" + leftLeaf);
+      if (tree[leftLeaf] == null) {
+        tree[leftLeaf] = data;
         return;
       }
-      index++;
+
+      int rightLeaf = leftLeaf + 1;
+      Assert.isTrue(rightLeaf <= tree.length-1, "越界了-" + rightLeaf);
+      if (tree[rightLeaf] == null){
+        tree[rightLeaf] = data;
+        return;
+      }
+      deep++;
     }
 
   }
@@ -49,6 +56,10 @@ public class ArrayBinaryTree {
     binaryTree.insert('G');
     System.out.println("binaryTree = " + binaryTree);
     binaryTree.insert('H');
+    System.out.println("binaryTree = " + binaryTree);
+    binaryTree.insert('I');
+    System.out.println("binaryTree = " + binaryTree);
+    binaryTree.insert('J');
     System.out.println("binaryTree = " + binaryTree);
 
   }
