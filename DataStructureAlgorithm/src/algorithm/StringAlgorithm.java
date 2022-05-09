@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.checkerframework.checker.units.qual.C;
 import org.junit.Test;
 
+import java.time.Clock;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.HashSet;
 
@@ -150,6 +152,27 @@ public class StringAlgorithm {
     }
   }
   //endregion
+
+
+  @Test
+  public void printAIn60s () {
+    long start = Clock.systemDefaultZone().millis();
+    log.info("start = {}", start);
+    for (int i = 0; i < 100; i++) {
+      long run = Clock.systemDefaultZone().millis();
+      if (run - start < (60 * 1000)) {
+        log.info("{}", "a");
+        try {
+          Thread.sleep(((60 * 1000) - (run - start)) / (100 - i));
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+        }
+      }
+    }
+    long end = Clock.systemDefaultZone().millis();
+    log.info("end = {}", end);
+    log.info("spend = {}", (end - start) / 1000);
+  }
 
 
 
