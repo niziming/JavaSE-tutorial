@@ -10,7 +10,7 @@
 
     <modules>
         <module>Interview</module>
-        <module>JavaSE</module>
+        <module>standard-edition</module>
         <module>JavaMainPoint</module>
         <module>DataStructureAlgorithm</module>
     </modules>
