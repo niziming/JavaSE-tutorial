@@ -11,8 +11,7 @@
     <modules>
         <module>Interview</module>
         <module>standard-edition</module>
-        <module>JavaMainPoint</module>
-        <module>DataStructureAlgorithm</module>
+        <module>Interview/DataStructureAlgorithm</module>
     </modules>
 
     <dependencies>
