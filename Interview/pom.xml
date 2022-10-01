@@ -5,7 +5,7 @@
     <modules>
         <module>practice</module>
         <module>mashibing</module>
-        <module>DataStructureAlgorithm</module>
+        <module>data_structure_algorithm</module>
     </modules>
 
     <parent>
