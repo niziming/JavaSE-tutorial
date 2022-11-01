@@ -6,6 +6,7 @@
         <module>practice</module>
         <module>mashibing</module>
         <module>data_structure_algorithm</module>
+        <module>leetcode</module>
     </modules>
 
     <parent>
