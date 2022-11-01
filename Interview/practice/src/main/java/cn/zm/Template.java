@@ -19,6 +19,10 @@ public class Template {
 
     }
 
+    public static void main(String[] args) {
+
+    }
+
     // static volatile int state;
     //
     // public static void main(String[] args) {
