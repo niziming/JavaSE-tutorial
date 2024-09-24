@@ -13,13 +13,14 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        File source = FileUtil.newFile("asset/ccd1ab831790804c23f036612e4b05ffbd691bc5.json");
-        File result = FileUtil.newFile("asset/Building Your English Brain01.txt");
+        File source = FileUtil.newFile("asset/659b2ada4be202b53b0819a36ddea068d2c852e4.json");
+        File result = FileUtil.newFile("asset/Building Your English Brain05 translate.txt");
         FileReader fileReader = FileReader.create(source);
         JSONObject jsonObject = JSONUtil.parseObj(fileReader.readString());
         JSONArray array = jsonObject.getJSONArray("body");
         String content = array.stream().map(o -> {
             JSONObject o1 = (JSONObject) o;
+            // return o1.getStr("content").split("\n")[0];
             return o1.getStr("content");
         }).collect(Collectors.joining(" "));
 
